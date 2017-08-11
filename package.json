@@ -24,6 +24,7 @@
     "run-sequence": "^2.1.0"
   },
   "dependencies": {
+    "glob": "^7.1.2",
     "gulp-cssnano": "^2.1.2"
   }
 }
