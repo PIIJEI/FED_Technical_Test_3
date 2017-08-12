@@ -7,5 +7,87 @@
  */
 /* Colors */
 body {
-  font-family: "Myriad Pro", sans-serif, serif;
-  background: radial-gradient(circle at center, #ecf0f1, #bdc3c7); }
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0; }
+  body nav {
+    display: none; }
+  body main {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center; }
+    body main #container {
+      display: block;
+      margin: 0 auto;
+      background: #ffffff;
+      width: 960px;
+      max-width: 100%; }
+      body main #container #title {
+        padding: 14px 16px; }
+        body main #container #title h1 {
+          text-align: left;
+          word-break: keep-all;
+          text-align: left;
+          font-size: 1.2em;
+          letter-spacing: 0.05em; }
+        body main #container #title p {
+          text-align: left; }
+      body main #container #links {
+        width: 100%; }
+        body main #container #links .btn {
+          display: inline-block;
+          margin-top: 5px;
+          margin-bottom: 5px; }
+          body main #container #links .btn a {
+            text-decoration: none;
+            color: #1c1c1c;
+            padding: 45px 16px;
+            font-size: 1em;
+            letter-spacing: 0.05em;
+            line-height: 1.2em;
+            background: #ffffff;
+            border-radius: 1px;
+            font-weight: 400; }
+        body main #container #links #technicalTest {
+          border: 1px solid #0e798b; }
+          body main #container #links #technicalTest a {
+            font-weight: 400; }
+            body main #container #links #technicalTest a:hover {
+              background: #0e798b;
+              color: #ecf0f1; }
+          body main #container #links #technicalTest p {
+            padding: 10px; }
+        body main #container #links #creativeCharity {
+          border: 1px solid #f29323; }
+          body main #container #links #creativeCharity a {
+            font-weight: 400; }
+            body main #container #links #creativeCharity a:hover {
+              background: #f29323;
+              color: #ecf0f1; }
+          body main #container #links #creativeCharity p {
+            padding: 10px; }
+        body main #container #links #creativeFestival {
+          border: 1px solid #14b2cc; }
+          body main #container #links #creativeFestival a {
+            font-weight: 400; }
+            body main #container #links #creativeFestival a:hover {
+              background: #14b2cc;
+              color: #ecf0f1; }
+          body main #container #links #creativeFestival p {
+            padding: 10px; }
+  body footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    font-size: .75em;
+    color: #c0c0c0;
+    letter-spacing: 0.05em;
+    margin-top: 25px; }
+    body footer a {
+      text-decoration: none;
+      color: #c0c0c0; }
+      body footer a:hover {
+        color: #a7a7a7;
+        text-decoration: underline; }

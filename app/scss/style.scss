@@ -8,6 +8,7 @@
 
 /* Colors */
 $white 		: #ffffff;
+$dark 		: #1c1c1c;
 $clouds		: #ecf0f1;
 $silver		: #bdc3c7;
 $gray  		: #f1f8f9;
@@ -22,27 +23,127 @@ $asphalt	: #34495e;
 $sunflower	: #f1c40f;
 $sunflower2	: #f39c12;
 
-$fontMain	: 'Myriad Pro', sans-serif, serif;
+$fontMain	: 'Myriad Pro', sans-serif;
+$openSans	: 'Open Sans', sans-serif;
 
 body {
-	font-family: $fontMain;
-	background: radial-gradient(circle at center, $clouds, $silver);
-
-	header {
-
-	}//header
+	font-family: $openSans;
+	margin: 0;
+	padding: 0;
 
 	nav {
-
+		display: none;
 	}//nav
 
 	main {
+		width: 100%;
+		display: block;
+		margin: 0 auto;
+		text-align: center;
 		#container {
+			display: block;
+			margin: 0 auto;
+			background: $white;
+			width: 960px;
+			max-width: 100%;
+			#title {
+				padding: 14px 16px;
+				h1 {
+					text-align: left;
+					word-break: keep-all;
+					text-align: left;
+					font-size: 1.2em;
+					// font-family: $openSans;
+					letter-spacing: 0.05em;
+				}//h1
+				p {
+					text-align: left;
+				}//p
+			}//title
 
+			#links {
+				width: 100%;
+				.btn {
+					display: inline-block;
+					margin-top: 5px;
+					margin-bottom: 5px;
+					a {
+						text-decoration: none;
+						color: $dark;
+						padding: 45px 16px;
+						font-size: 1em;
+						letter-spacing: 0.05em;
+						line-height: 1.2em;
+						background: $white;
+						border-radius: 1px;
+						font-weight: 400;
+					}//a global on site
+				}//btn
+				#technicalTest {
+					border: 1px solid $navyBlue;
+					a {
+						font-weight: 400;
+						&:hover {
+							background: $navyBlue;
+							color: $clouds;
+						}//hover
+					}//a
+
+					p {
+						padding: 10px;
+					}//p
+				}//technicalTest
+
+				#creativeCharity {
+					border: 1px solid $orange;
+					a {
+						font-weight: 400;
+						&:hover {
+							background: $orange;
+							color: $clouds;
+						}//hover
+					}//a
+
+					p {
+						padding: 10px;
+					}//p
+				}//creativeCharity
+
+				#creativeFestival {
+					border: 1px solid $lightBlue;
+					a {
+						font-weight: 400;
+						&:hover {
+							background: $lightBlue;
+							color: $clouds;
+						}//hover
+					}//a
+
+					p {
+						padding: 10px;
+					}//p
+				}//creativeFestival	
+			}//links
+			
 		}//container
 	}//main
 
 	footer {
-
+		width: 100%;
+		position: relative;
+		bottom: 0;
+		text-align:center;
+		font-size: .75em;
+		color: $inactive;
+		letter-spacing: 0.05em;
+		margin-top: 25px;
+		a {
+			text-decoration: none;
+			color: $inactive;
+			&:hover {
+				color: darken($inactive, 10%);
+				text-decoration: underline;
+			}//hover
+		}//a
 	}//footer
 }//body

@@ -1,0 +1,45 @@
+/* 
+******* Main Site Styling for 
+- Front End Technical Test
+- Charity Creative Landing Page
+- Festival Creative Landing Page
+*******
+ */
+/* Colors */
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  /* Return to Main Page */ }
+  body #return {
+    background: #1c1c1c;
+    font-size: .7em;
+    padding: 10px; }
+    body #return ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      body #return ul li {
+        overflow: hidden; }
+        body #return ul li a {
+          text-decoration: none;
+          color: #ecf0f1;
+          padding: 3px 10px;
+          border-left: 5px solid #14b2cc; }
+          body #return ul li a:hover {
+            color: #14b2cc; }
+  body footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    font-size: .75em;
+    color: #c0c0c0;
+    letter-spacing: 0.05em;
+    margin-top: 25px; }
+    body footer a {
+      text-decoration: none;
+      color: #c0c0c0; }
+      body footer a:hover {
+        color: #a7a7a7;
+        text-decoration: underline; }

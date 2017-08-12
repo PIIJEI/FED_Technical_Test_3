@@ -1,0 +1,85 @@
+/* 
+******* Main Site Styling for 
+- Front End Technical Test
+- Charity Creative Landing Page
+- Festival Creative Landing Page
+*******
+ */
+
+/* Colors */
+$white 		: #ffffff;
+$dark 		: #1c1c1c;
+$clouds		: #ecf0f1;
+$silver		: #bdc3c7;
+$gray  		: #f1f8f9;
+$lightGray	: #e7e7e7;
+$navyBlue	: #0e798b;
+$lightBlue	: #14b2cc;
+$orange		: #f29323;
+$orangeO	: #f8c991;
+$inactive	: #c0c0c0;
+$midnight	: #2c3e50;
+$asphalt	: #34495e;
+$sunflower	: #f1c40f;
+$sunflower2	: #f39c12;
+
+$fontMain	: 'Myriad Pro', sans-serif;
+$openSans	: 'Open Sans', sans-serif;
+
+body {
+	font-family: $openSans;
+	margin: 0;
+	padding: 0;
+
+	/* Return to Main Page */
+	#return {
+		background: $dark;
+		font-size: .7em;
+		padding: 10px;
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			li {
+				overflow: hidden;
+				a {
+					text-decoration: none;
+					color: $clouds;
+					padding: 3px 10px;
+					border-left: 5px solid $lightBlue;
+					&:hover {
+						// background: $clouds;
+						color: $lightBlue;
+					}//hover
+				}//a
+			}//li
+		}//ul
+	}//return tab
+
+	header {
+
+	}//header
+
+	main {
+
+	}//main
+
+	footer {
+		width: 100%;
+		position: relative;
+		bottom: 0;
+		text-align:center;
+		font-size: .75em;
+		color: $inactive;
+		letter-spacing: 0.05em;
+		margin-top: 25px;
+		a {
+			text-decoration: none;
+			color: $inactive;
+			&:hover {
+				color: darken($inactive, 10%);
+				text-decoration: underline;
+			}//hover
+		}//a
+	}//footer
+}//body
