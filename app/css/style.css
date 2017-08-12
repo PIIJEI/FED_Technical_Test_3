@@ -1,0 +1,11 @@
+/* 
+******* Main Site Styling for 
+- Front End Technical Test
+- Charity Creative Landing Page
+- Festival Creative Landing Page
+*******
+ */
+/* Colors */
+body {
+  font-family: "Myriad Pro", sans-serif, serif;
+  background: radial-gradient(circle at center, #ecf0f1, #bdc3c7); }

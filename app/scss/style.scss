@@ -1,0 +1,48 @@
+/* 
+******* Main Site Styling for 
+- Front End Technical Test
+- Charity Creative Landing Page
+- Festival Creative Landing Page
+*******
+ */
+
+/* Colors */
+$white 		: #ffffff;
+$clouds		: #ecf0f1;
+$silver		: #bdc3c7;
+$gray  		: #f1f8f9;
+$lightGray	: #e7e7e7;
+$navyBlue	: #0e798b;
+$lightBlue	: #14b2cc;
+$orange		: #f29323;
+$orangeO	: #f8c991;
+$inactive	: #c0c0c0;
+$midnight	: #2c3e50;
+$asphalt	: #34495e;
+$sunflower	: #f1c40f;
+$sunflower2	: #f39c12;
+
+$fontMain	: 'Myriad Pro', sans-serif, serif;
+
+body {
+	font-family: $fontMain;
+	background: radial-gradient(circle at center, $clouds, $silver);
+
+	header {
+
+	}//header
+
+	nav {
+
+	}//nav
+
+	main {
+		#container {
+
+		}//container
+	}//main
+
+	footer {
+
+	}//footer
+}//body
