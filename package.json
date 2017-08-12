@@ -1,15 +1,33 @@
 {
-  "name": "project",
+  "name": "front-end-technical-test-3",
   "version": "0.0.1",
-  "description": "Technical Test for NU Web",
+  "description": "Front End Technical Test",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://PIIJEI@github.com/PIIJEI/FED_Technical_Test_3.git"
   },
   "author": "Piotr Osiak",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/PIIJEI/FED_Technical_Test_3/issues"
   },
   "homepage": "https://github.com/PIIJEI/FED_Technical_Test_3#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.6",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.1.2",
+    "run-sequence": "^2.1.0"
+  },
+  "dependencies": {
+    "gulp-cssnano": "^2.1.2"
+  }
 }
