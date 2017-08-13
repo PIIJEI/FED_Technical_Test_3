@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-	
+
 </head>
 <body>
 <!-- Header -->
@@ -26,20 +26,54 @@
 <header role="banner">
 	<nav role="navigation">
 		<!-- Navigation -->
-	<span class="logo"></span>
-	<ul>
-		<li><a href="#" onclick="return false" class="fa fa-tachometer"> Dashboards</a></li>
-		<!-- Active Nav -->
-		<li class="active-nav">
-			<a href="#" onclick="return false" class="fa fa-calendar"> Events</a>
-		</li>
-		<li><a href="#" onclick="return false" class="fa fa-bar-chart"> Sales</a></li>
-		<li><a href="#" onclick="return false" class="fa fa-comments"> Promotions</a></li>
-		<li><a href="#" onclick="return false" class="fa fa-shopping-bag"> Shops</a></li>
-		<li><a href="#" onclick="return false" class="fa fa-users"> HR Management</a></li>
-		<li><a href="#" onclick="return false" class="fa fa-line-chart"> Financials</a></li>
-		<li><a href="#" onclick="return false" class="fa fa-user"> My Account</a></li>
-	</ul>
+		<div id="brand_logo">
+			<a href="#" onclick="return false">
+				<img src="../../images/brand_logo.png" alt="nutickets" title="NU Tickets Brand Logo">
+			</a>
+		</div>
+		<ul>
+			<li>
+				<a href="#" onclick="return false">
+					<span class="fa fa-tachometer"></span> Dashboards
+				</a>
+			</li>
+			<!-- Active Nav -->
+			<li>
+				<a id="active-nav" href="#" onclick="return false">
+					<span class="fa fa-calendar"></span> Events
+				</a>
+			</li>
+			<li>
+				<a href="#" onclick="return false">
+					<span class="fa fa-bar-chart"></span> Sales
+				</a>
+			</li>
+			<li>
+				<a href="#" onclick="return false">
+					<span class="fa fa-comments"></span> Promotions
+				</a>
+			</li>
+			<li>
+				<a href="#" onclick="return false">
+					<span class="fa fa-shopping-bag"></span> Shops
+				</a>
+			</li>
+			<li>
+				<a href="#" onclick="return false">
+					<span class="fa fa-users"></span> HR Management
+				</a>
+			</li>
+			<li>
+				<a href="#" onclick="return false">
+					<span class="fa fa-line-chart"></span> Financials
+				</a>
+			</li>
+			<li>
+				<a href="#" onclick="return false">
+					<span class="fa fa-user"></span> My Account
+				</a>
+			</li>
+		</ul>
 	</nav>
 </header>
 
@@ -51,8 +85,8 @@
 		<ul>
 			<li><a href="#" onclick="return false">Add Events</a></li>
 			<!-- Active Side Nav -->
-			<li class="active-side">
-				<a href="#" onclick="return false">Manage Events</a>
+			<li>
+				<a id="active-side" href="#" onclick="return false">Manage Events</a>
 			</li>
 			<li><a href="#" onclick="return false">Ticket Templates</a></li>
 			<li><a href="#" onclick="return false">Event Templates</a></li>
@@ -67,8 +101,8 @@
 		<section id="infoNav" class="info-menu">
 			<ul>
 				<!-- Active Info Nav -->
-				<li class="active-info">
-					<a href="#" onclick="return false">Information</a>
+				<li>
+					<a id="active-info" href="#" onclick="return false">Information</a>
 				</li>
 				<li><a href="#" onclick="return false">Reports</a></li>
 				<li><a href="#" onclick="return false">Data Capture</a></li>
@@ -78,8 +112,32 @@
 			</ul>
 		</section>
 
-		<section id="eventName" class="info-event-name">
-			
+		<section id="eventHeader" class="theEvent">
+			<figure role="figure">
+				<!-- <img src=""> -->
+				<span id="testimg"></span>
+				<figcaption>
+					<!-- a href onclick will have a window pop up function (JS) -->
+					<h1>HYPER Festival LAUNCH PARTY 
+						<a id="dialog" href="#" onclick="return false">
+					 		<span class="fa fa-eye"></span> Open dialog
+						</a>
+					</h1>
+					<div class="schedule">
+						<span class="schedule schedule__title">When</span>
+						<span class="schedule schedule__info">29 July 2016</span>
+
+						<span class="schedule schedule__title">Where</span>
+						<span class="schedule schedule__info">Hype Expo Manchester</span>
+
+						<span class="schedule schedule__title">Tickets sold</span>
+						<span class="schedule schedule__info">12,642</span>
+
+						<span class="schedule schedule__title">Subscribed to list</span>
+						<span class="schedule schedule__info">648</span>
+					</div>
+				</figcaption>
+			</figure>
 		</section>
 
 		<section id="bestSelling">

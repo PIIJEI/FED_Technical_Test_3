@@ -28,7 +28,175 @@ body {
           border-left: 5px solid #14b2cc; }
           body #return ul li a:hover {
             color: #14b2cc; }
+  body header {
+    background: #0e798b; }
+    body header nav {
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      /* Logo */ }
+      body header nav #brand_logo img {
+        width: 240px;
+        padding: 10px 15px 0px 15px;
+        max-width: 100%;
+        float: left; }
+      body header nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden; }
+        body header nav ul li {
+          text-align: center; }
+          body header nav ul li a {
+            float: left;
+            text-decoration: none;
+            font-weight: 400;
+            padding: 34px 16px;
+            line-height: 1.2em;
+            font-size: .85em;
+            letter-spacing: 0.05em;
+            color: #ecf0f1; }
+            body header nav ul li a span {
+              margin: 0 3px 0 0; }
+            body header nav ul li a:hover {
+              background: #0b5c6a; }
+          body header nav ul li #active-nav {
+            background: #0b5c6a; }
+  body main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row; }
+    body main aside {
+      color: #0e798b;
+      width: 320px;
+      max-width: 100%;
+      background: #f1f8f9;
+      height: 100vh;
+      border-right: 1px solid #e0e0e0; }
+      body main aside h1 {
+        font-size: 1.45em;
+        padding: 14px 16px; }
+        body main aside h1 span {
+          float: right;
+          padding: 0 10px; }
+      body main aside ul {
+        list-style-type: none;
+        list-style-position: outside;
+        overflow: hidden;
+        margin: 0;
+        padding: 0; }
+        body main aside ul li {
+          margin: 0;
+          padding: 0; }
+          body main aside ul li a {
+            display: block;
+            text-decoration: none;
+            color: #4f4f4f;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            font-size: .9em;
+            padding: 10px 16px;
+            border-left: 7px solid transparent; }
+            body main aside ul li a:hover {
+              color: #0e798b;
+              border-left-color: #0e798b; }
+        body main aside ul #active-side {
+          color: #0e798b;
+          border-left-color: #0e798b; }
+    body main article#info {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      /* Content Event Header */ }
+      body main article#info #infoNav {
+        margin: 0;
+        padding: 0; }
+        body main article#info #infoNav ul {
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          list-style-position: outside;
+          overflow: hidden;
+          border-bottom: 1px solid #e0e0e0;
+          background: #f6f6f6; }
+          body main article#info #infoNav ul li {
+            float: left; }
+            body main article#info #infoNav ul li a {
+              border-right: 1px solid #e0e0e0;
+              text-decoration: none;
+              color: #14b2cc;
+              font-weight: 600;
+              letter-spacing: 0.05em;
+              display: inline-block;
+              padding: 18px 16px;
+              font-size: .8em; }
+              body main article#info #infoNav ul li a:hover {
+                color: #f29323; }
+        body main article#info #infoNav #active-info {
+          background: #f29323;
+          color: #ffffff;
+          text-transform: uppercase; }
+      body main article#info .theEvent {
+        margin: 0;
+        padding: 0; }
+        body main article#info .theEvent figure {
+          margin: 0;
+          padding: 10px;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row; }
+          body main article#info .theEvent figure #testimg {
+            float: left;
+            display: block;
+            content: '';
+            width: 100px;
+            height: 100px;
+            background: #14b2cc;
+            margin: 0 5px; }
+          body main article#info .theEvent figure figcaption {
+            margin: 0;
+            padding: 0;
+            background: #f6f6f6;
+            /* Schedule */ }
+            body main article#info .theEvent figure figcaption h1 {
+              margin: 0;
+              padding: 5px 10px;
+              font-size: 1.65em;
+              color: #14b2cc; }
+              body main article#info .theEvent figure figcaption h1 #dialog {
+                position: relative;
+                top: -5px;
+                margin: 0 0 0 3px;
+                font-size: .6rem;
+                font-weight: 400;
+                letter-spacing: 0.05em;
+                border-radius: 3px;
+                text-decoration: none;
+                color: #ffffff;
+                background: #14b2cc;
+                padding: 6px 8px;
+                border: 1px solid transparent; }
+                body main article#info .theEvent figure figcaption h1 #dialog:hover {
+                  background: #ffffff;
+                  color: #14b2cc;
+                  border-color: #14b2cc; }
+            body main article#info .theEvent figure figcaption .schedule {
+              margin: 0;
+              padding: 3px 10px;
+              font-size: .9rem; }
+              body main article#info .theEvent figure figcaption .schedule__title {
+                color: #b7bec2;
+                padding: 2px; }
+              body main article#info .theEvent figure figcaption .schedule__info {
+                color: #78848c;
+                padding: 2px; }
+              body main article#info .theEvent figure figcaption .schedule:nth-child(1n+1) {
+                display: block; }
   body footer {
+    clear: both;
     width: 100%;
     position: relative;
     bottom: 0;

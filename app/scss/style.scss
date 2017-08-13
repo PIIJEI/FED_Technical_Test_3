@@ -23,11 +23,13 @@ $asphalt	: #34495e;
 $sunflower	: #f1c40f;
 $sunflower2	: #f39c12;
 
-$fontMain	: 'Myriad Pro', sans-serif;
 $openSans	: 'Open Sans', sans-serif;
 
 body {
 	font-family: $openSans;
+	font-size: 1.2em;
+	line-height: 1.2em;
+	letter-spacing: 0.05em;
 	margin: 0;
 	padding: 0;
 
@@ -53,7 +55,6 @@ body {
 					word-break: keep-all;
 					text-align: left;
 					font-size: 1.2em;
-					// font-family: $openSans;
 					letter-spacing: 0.05em;
 				}//h1
 				p {
