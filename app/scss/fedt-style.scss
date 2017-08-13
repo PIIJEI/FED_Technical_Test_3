@@ -295,7 +295,6 @@ body {
 					flex-direction: row;
 
 					&__one, &__two, &__three {
-						border: 1px solid $borderG;
 						display: block;
 						h1 {
 							background: $gray;
@@ -306,16 +305,72 @@ body {
 						}//h1
 					}//cols one,two,three
 
-					&__one {
-						&__one--title {
-							// width: 400px;
-							margin: 0 10px;
-						}//one-title
 
-						&__one--content {
+					/* Sections with borders */
+					.best-selling-tickets,.quick-settings,
+					.achievement-results, .reports, .attendance,
+					.bst-col__three--title {
+						border: 1px solid $borderG;
+						width: 425px;
+						margin: 25px 0;
+						h1 {
+							margin: 0; 
+							background-image: url('../../images/headerel.png');
+							background-repeat: no-repeat;
+							background-position: right;
+							background-size: contain;
+						}//h1
+					}//best-selling-tickets,quick-settings
 
-						}//one-content
-					}//one
+					.best-selling-tickets {
+						.el {
+							.el-list {
+								.leftOutputData {
+									background: red;
+									margin: 0;
+									padding: 0;
+									.icon {
+										display: block;
+										content: '';
+										width: 50px;
+										height: 50px;
+										background: $orange;
+										border-radius: 100%;
+										float: left;
+										margin: 10px;
+									}
+									h2 {
+										margin: 10px 0;
+										font-size: .9em;
+									}//h2
+									.edit, .viewSales {
+										text-align: center;
+										margin: 3px;
+										font-size: .85em;
+										text-decoration: none;
+										padding: 7px 12px;
+										display: inline-block;
+										background: darken($gray, 5%);
+										color: $dark;
+									}//edit,viewSales
+								}//leftOutputData
+								.rightOutputData {
+									text-align: right;
+								}//rightOutputData
+
+							}//el-list
+							&:nth-child(odd) {
+								background: $white;
+								margin: 0;
+								padding: 25px 25px;
+							}//el-list
+							&:nth-child(even){
+								background: $gray;
+								margin: 0;
+								padding: 25px 25px;
+							}//nth-child
+						}//el
+					}//best-selling-tickets
 				}//bst-col
 			}//eventContent
 		}//article#info

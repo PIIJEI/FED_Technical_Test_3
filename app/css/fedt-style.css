@@ -212,9 +212,9 @@ body {
           padding: 10px 20px;
           display: flex;
           flex-wrap: wrap;
-          flex-direction: row; }
+          flex-direction: row;
+          /* Sections with borders */ }
           body main article#info #eventContent .bst-col__one, body main article#info #eventContent .bst-col__two, body main article#info #eventContent .bst-col__three {
-            border: 1px solid #e0e0e0;
             display: block; }
             body main article#info #eventContent .bst-col__one h1, body main article#info #eventContent .bst-col__two h1, body main article#info #eventContent .bst-col__three h1 {
               background: #f6f6f6;
@@ -222,8 +222,55 @@ body {
               font-size: 1.2em;
               font-weight: 400;
               padding: 14px 16px; }
-          body main article#info #eventContent .bst-col__one__one--title {
-            margin: 0 10px; }
+          body main article#info #eventContent .bst-col .best-selling-tickets, body main article#info #eventContent .bst-col .quick-settings,
+          body main article#info #eventContent .bst-col .achievement-results, body main article#info #eventContent .bst-col .reports, body main article#info #eventContent .bst-col .attendance,
+          body main article#info #eventContent .bst-col .bst-col__three--title {
+            border: 1px solid #e0e0e0;
+            width: 425px;
+            margin: 25px 0; }
+            body main article#info #eventContent .bst-col .best-selling-tickets h1, body main article#info #eventContent .bst-col .quick-settings h1,
+            body main article#info #eventContent .bst-col .achievement-results h1, body main article#info #eventContent .bst-col .reports h1, body main article#info #eventContent .bst-col .attendance h1,
+            body main article#info #eventContent .bst-col .bst-col__three--title h1 {
+              margin: 0;
+              background-image: url("../../images/headerel.png");
+              background-repeat: no-repeat;
+              background-position: right;
+              background-size: contain; }
+          body main article#info #eventContent .bst-col .best-selling-tickets .el .el-list .leftOutputData {
+            background: red;
+            margin: 0;
+            padding: 0; }
+            body main article#info #eventContent .bst-col .best-selling-tickets .el .el-list .leftOutputData .icon {
+              display: block;
+              content: '';
+              width: 50px;
+              height: 50px;
+              background: #f29323;
+              border-radius: 100%;
+              float: left;
+              margin: 10px; }
+            body main article#info #eventContent .bst-col .best-selling-tickets .el .el-list .leftOutputData h2 {
+              margin: 10px 0;
+              font-size: .9em; }
+            body main article#info #eventContent .bst-col .best-selling-tickets .el .el-list .leftOutputData .edit, body main article#info #eventContent .bst-col .best-selling-tickets .el .el-list .leftOutputData .viewSales {
+              text-align: center;
+              margin: 3px;
+              font-size: .85em;
+              text-decoration: none;
+              padding: 7px 12px;
+              display: inline-block;
+              background: #e9e9e9;
+              color: #1c1c1c; }
+          body main article#info #eventContent .bst-col .best-selling-tickets .el .el-list .rightOutputData {
+            text-align: right; }
+          body main article#info #eventContent .bst-col .best-selling-tickets .el:nth-child(odd) {
+            background: #ffffff;
+            margin: 0;
+            padding: 25px 25px; }
+          body main article#info #eventContent .bst-col .best-selling-tickets .el:nth-child(even) {
+            background: #f6f6f6;
+            margin: 0;
+            padding: 25px 25px; }
   body footer {
     clear: both;
     width: 100%;
