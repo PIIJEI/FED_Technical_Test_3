@@ -13,6 +13,7 @@ $clouds		: #ecf0f1;
 $silver		: #bdc3c7;
 $vLightBlue : #f1f8f9;
 $gray		: #f6f6f6;
+$gray2		: #f2f2f2;
 $borderG    : #e0e0e0;
 $lightGray	: #e7e7e7;
 $navyBlue	: #0e798b;
@@ -201,6 +202,7 @@ body {
 			.theEvent {
 				margin: 0;
 				padding: 0;
+				border-bottom: 1px solid $borderG;
 				figure {
 					margin: 0;
 					padding: 10px;
@@ -208,24 +210,23 @@ body {
 					flex-wrap: wrap;
 					flex-direction: row;
 					// img{}
-					#testimg{
+					img{
 						float: left;
 						display: block;
-						content:'';
-						width: 100px;
-						height: 100px;
-						background: $lightBlue;
-						margin: 0 5px;
+						width: 125px;
+						height: 125px;
+						margin: 0 15px;
+						box-shadow: 4px 4px 0px 0px $gray2;
+						border: 2px solid $gray2;
 					}//testimg
 
 					figcaption {
 						margin: 0;
-						padding: 0;
-						background: $gray;
+						padding: 14px 3px;
 						h1 {
 							margin: 0;
 							padding: 5px 10px;
-							font-size: 1.65em;
+							font-size: 1.5em;
 							color: $lightBlue;
 							#dialog {
 								position: relative;
@@ -251,8 +252,10 @@ body {
 						/* Schedule */
 						.schedule {
 							margin: 0;
-							padding: 3px 10px;
+							padding: 5px;
 							font-size: .9rem;
+							display: block;
+
 							&__title {
 								color: darken($silver, 2%);
 								padding: 2px;
@@ -260,14 +263,61 @@ body {
 							&__info {
 								color: darken($silver, 25%);
 								padding: 2px;
+								padding-left: 10px;
 							}//schedule__title
-							&:nth-child(1n+1) {
-								display: block;
-							}
+
+							.cols {
+								width: 100%;
+								.col-1 {
+									width: 50%;
+									float: left;
+								}//col-1
+								.col-2 {
+									width: 50%;
+									float: right;
+								}//col-2
+							}//cols
 						}//schedule
 					}//figcaption
 				}//figure
 			}//theEvent
+
+			/* Content Main - 2 Columns */
+			#eventContent {
+				margin: 0;
+				padding: 0;
+				border-bottom: 1px solid $borderG;
+
+				.bst-col {
+					padding: 10px 20px;
+					display: flex;
+					flex-wrap: wrap;
+					flex-direction: row;
+
+					&__one, &__two, &__three {
+						border: 1px solid $borderG;
+						display: block;
+						h1 {
+							background: $gray;
+							color: $lightBlue;
+							font-size: 1.2em;
+							font-weight: 400;
+							padding: 14px 16px;
+						}//h1
+					}//cols one,two,three
+
+					&__one {
+						&__one--title {
+							// width: 400px;
+							margin: 0 10px;
+						}//one-title
+
+						&__one--content {
+
+						}//one-content
+					}//one
+				}//bst-col
+			}//eventContent
 		}//article#info
 	}//main
 

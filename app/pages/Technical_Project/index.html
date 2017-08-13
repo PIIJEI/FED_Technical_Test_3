@@ -94,7 +94,6 @@
 			<li><a href="#" onclick="return false">Reports</a></li>
 		</ul>
 	</aside>
-
 	<!-- Information -->
 	<article id="info">
 		<!-- Info Menu -->
@@ -114,8 +113,8 @@
 
 		<section id="eventHeader" class="theEvent">
 			<figure role="figure">
-				<!-- <img src=""> -->
-				<span id="testimg"></span>
+				<img src="../../images/header_img.png" alt="armada music" title="Armada Deep Beach Party">
+				<!-- <span id="testimg"></span> -->
 				<figcaption>
 					<!-- a href onclick will have a window pop up function (JS) -->
 					<h1>HYPER Festival LAUNCH PARTY 
@@ -124,24 +123,283 @@
 						</a>
 					</h1>
 					<div class="schedule">
-						<span class="schedule schedule__title">When</span>
-						<span class="schedule schedule__info">29 July 2016</span>
+						<div class="cols">
+							<div class="col-1">
+								<span class="schedule">
+									<span class="schedule__title">When</span>
+									<span class="schedule__info">29 July 2016</span>
+								</span>
 
-						<span class="schedule schedule__title">Where</span>
-						<span class="schedule schedule__info">Hype Expo Manchester</span>
+								<span class="schedule">
+									<span class="schedule__title">Where</span>
+									<span class="schedule__info">Hype Expo Manchester</span>
+								</span>
+							</div>
+							<div class="col-2">
+								<span class="schedule">
+									<span class="schedule__title">Tickets sold</span>
+									<span class="schedule__info">12,642</span>
+								</span>
 
-						<span class="schedule schedule__title">Tickets sold</span>
-						<span class="schedule schedule__info">12,642</span>
-
-						<span class="schedule schedule__title">Subscribed to list</span>
-						<span class="schedule schedule__info">648</span>
+								<span class="schedule">
+									<span class="schedule__title">Subscribed to list</span>
+									<span class="schedule__info">648</span>
+								</span>
+							</div>
+						</div>
 					</div>
 				</figcaption>
 			</figure>
 		</section>
 
-		<section id="bestSelling">
-			
+		<section id="eventContent">
+			<div class="bst-col">
+			<!-- Column 1 -->
+				<div class="bst-col bst-col__one">
+					<!-- Best Selling Tickets -->
+					<div class="best-selling-tickets">
+						<!-- Title -->
+						<div class="bst-col__one--title">
+							<h1>Best Selling Tickets</h1>
+						</div>
+
+						<!-- Content -->
+						<div class="bst-col__one--content">
+							<div class="tickets">
+								<!-- Adult General -->
+								<div class="tickets__adult-general">
+									<div class="el">
+										<span class="icon"></span>
+										<h2>Adult - General</h2>
+										<a href="#" onclick="return false">Edit</a>
+										<a href="#" onclick="return false">View Sales</a>
+										<div class="output">
+											<!-- Output Results -->
+											<p>50 sold since Jan 17</p>
+											<span>20% more sold than last period</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Child Ticket - General -->
+								<div class="tickets__child-ticket-general first">
+									<div class="el">
+										<span class="icon"></span>
+										<h2>Child Ticket - General</h2>
+										<a href="#" onclick="return false">Edit</a>
+										<a href="#" onclick="return false">View Sales</a>
+										<div class="output">
+											<!-- Output Results -->
+											<p>12 sold since Jan 17</p>
+											<span>20% less sold than last period</span>
+											<span id="salesPopUp" class="icon fa fa-info"></span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Child Ticket General - Hidden -->
+								<div class="tickets__child-ticket-general-hidden">
+									<div class="el">
+										<span class="icon"></span>
+										<h2>Child Ticket General - <span>Hidden</span></h2>
+										<a href="#" onclick="return false">Edit</a>
+										<a href="#" onclick="return false">View Sales</a>
+										<div class="output">
+											<!-- Output Results -->
+											<p>3 sold since Jan 17</p>
+											<span>20% more sold than last period</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Child Ticket General -->
+								<div class="tickets__child-ticket-general second">
+									<div class="el">
+										<span class="icon"></span>
+										<h2>Child Ticket - General</h2>
+										<a href="#" onclick="return false">Edit</a>
+										<a href="#" onclick="return false">View Sales</a>
+										<div class="output">
+											<!-- Output Results -->
+											<p>Not on Sale</p>
+											<span>Ticket is out of stock</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Child Ticket General -->
+								<div class="tickets__child-child-ticket-general third">
+									<div class="el">
+										<span class="icon"></span>
+										<h2>Child Ticket - General</h2>
+										<a href="#" onclick="return false">Edit</a>
+										<a href="#" onclick="return false">View Sales</a>
+										<div class="output">
+											<!-- Output Results -->
+											<p>Upcoming Sale</p>
+											<span>Ticket is on sale  from tomorrow</span>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				<!-- Quick Settings -->
+					<div class="quick-settings">
+						
+						<div class="bst-col__one--title">
+							<h1>Quick Settings</h1>
+						</div>
+						
+						<div class="bst-col__one--content">
+							<div class="el">
+								<input type="checkbox" name="element1">
+								<label>Lorem ipsum dolor set amet</label>	
+								<p>Vestibulum quis nulla dui. Donec dapibus, neque ac pulvinar fringilla.</p>
+							</div>
+							<div class="el">
+								<input type="checkbox" name="element2">
+								<label>Duis rhoncus leo diam</label>	
+								<p>Pellentesque a fringilla nisi. Aliquam bibendum nisi est</p>
+							</div>
+							<div class="el">
+								<input type="checkbox" name="element3">
+								<label>Curabitur sed tincidunt lorem</label>	
+								<p>Suspendisse auctor arcu ut leo venenatis, eget dignissim nunc luctus. </p>
+							</div>
+						</div>
+						
+						<div class="bst-col__one--footer">
+							<ul>
+								<li><strong>Purchaser Data</strong> <span>Optional</span></li>
+								<li><strong>Shared Data</strong> <span>Optional</span></li>
+								<li><strong>Sharing Options</strong> <span>Sharing not required</span></li>
+								<li><strong>Purchase Limit</strong> <span>No limit (per purchaser)</span></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+
+			<!-- Column 2 -->
+				<!-- <div class="bst-col bst-col__two">
+					
+					<div class="achievement-results">
+						<ul>
+							<li>
+								<span class="value">48 Days</span>
+								<span class="achievement">till event's start</span>
+							</li>
+							<li>
+								<span class="value">12,642</span>
+								<span class="achievement">tickets sold</span>
+							</li>
+							<li>
+								<span class="value">648</span>
+								<span class="achievement">guests</span>
+							</li>
+						</ul>
+					</div>
+
+					
+					<div class="reports">
+						
+						<div class="bst-col__two--title">
+							<h1>Reports</h1>
+						</div>
+						<div class="bst-col__two--content">
+							<ul>
+								<li id="sales">Sales</li>
+								<li id="tickets">Tickets</li>
+							</ul>
+							<div id="graph">
+								
+								<div id="graph__sales">
+									
+									<img src="../../images/graph_sales.png" alt="graph sales" title="Graph Sales">
+								</div>
+								
+								<div id="graph__tickets">
+									
+									<img src="../../images/graph_tickets.png" alt="graph sales" title="Graph Sales">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					
+					<div class="attendance">
+						
+						<div class="bst-col__two--title">
+							<h1>Attendance</h1>
+						</div>
+						
+						<div class="bst-col__two--content">
+							<div class="el">
+								<div class="el__header">
+									<h2>Adult - General</h2>
+								</div>
+
+								<div class="el__buttons">
+									<span><a href="#" onclick="return false">View</a></span>
+									<span><a href="#" onclick="return false">Order Details</a></span>
+								</div>
+
+								<div class="el__email">
+									<p>John Doe <span><a href="#" onclick="return false">&lt;johndoe@gmail.com&gt; &#9662;</a></span></p>
+									<p>Applied: 13th May 2014 at 10:27</p>
+								</div>
+							</div>
+
+							<div class="el">
+								<div class="el__header">
+									<h2>Child Ticket - General</h2>
+								</div>
+
+								<div class="el__buttons">
+									<span><a href="#" onclick="return false">View</a></span>
+									<span><a href="#" onclick="return false">Order Details</a></span>
+								</div>
+
+								<div class="el__email">
+									<p>John Doe <span><a href="#" onclick="return false">&lt;johndoe@gmail.com&gt; &#9662;</a></span></p>
+									<p>Applied: 13th May 2014 at 10:27</p>
+								</div>
+							</div>
+
+							<div class="el">
+								<div class="el__header">
+									<h2>Child Ticket - General</h2>
+								</div>
+
+								<div class="el__buttons">
+									<span><a href="#" onclick="return false">View</a></span>
+									<span><a href="#" onclick="return false">Order Details</a></span>
+								</div>
+
+								<div class="el__email">
+									<p>John Doe <span><a href="#" onclick="return false">&lt;johndoe@gmail.com&gt; &#9662;</a></span></p>
+									<p>Applied: 13th May 2014 at 10:27</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div> -->
+
+				<!-- Column 3 - Full -->
+				<!-- <div class="bst-col bst-col__three">
+					<div class="bst-col__three--title">
+						<h1>Facebook Guest List Registration</h1>
+					</div>
+					<div class="bst-col__three--content">
+						
+					</div>
+				</div> -->
+			</div>
 		</section>
 	</article>
 </main>
