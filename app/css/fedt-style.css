@@ -5,7 +5,14 @@
 - Festival Creative Landing Page
 *******
  */
+/*********************
+BREAKPOINTS
+*********************/
 /* Colors */
+/* Breakpoints */
+/* Mobile */
+/* Tablet / Notebooks */
+/* Desktop */
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
@@ -40,6 +47,20 @@ body {
         padding: 10px 15px 0px 15px;
         max-width: 100%;
         float: left; }
+        @media (max-width: 40em) {
+          body header nav #brand_logo img {
+            /* BP MOBILE */
+            float: none;
+            display: block;
+            margin: 0 auto;
+            padding: 0; } }
+        @media (max-width: 64em) {
+          body header nav #brand_logo img {
+            /* TABLET MAX */
+            float: none;
+            display: block;
+            margin: 0 auto;
+            padding: 0; } }
       body header nav ul {
         list-style-type: none;
         margin: 0;
@@ -60,6 +81,13 @@ body {
               margin: 0 3px 0 0; }
             body header nav ul li a:hover {
               background: #0b5c6a; }
+            @media (max-width: 40em) {
+              body header nav ul li a {
+                /* BP MOBILE */
+                float: none;
+                display: inline-block;
+                width: 100%;
+                padding: 24px 16px; } }
           body header nav ul li #active-nav {
             background: #0b5c6a; }
   body main {
@@ -68,6 +96,14 @@ body {
     padding: 0;
     display: flex;
     flex-direction: row; }
+    @media (max-width: 40em) {
+      body main {
+        /* MOBILE ONLY */
+        flex-direction: column; } }
+    @media (max-width: 64em) {
+      body main {
+        /* TABLET ONLY */
+        flex-direction: column; } }
     body main aside {
       color: #0e798b;
       width: 320px;
@@ -99,13 +135,55 @@ body {
             letter-spacing: 0.05em;
             font-size: .9em;
             padding: 10px 16px;
-            border-left: 7px solid transparent; }
+            border-left: 7px solid transparent;
+            /* original bp here */ }
             body main aside ul li a:hover {
               color: #0e798b;
               border-left-color: #0e798b; }
         body main aside ul #active-side {
           color: #0e798b;
           border-left-color: #0e798b; }
+      @media (max-width: 40em) {
+        body main aside {
+          /* MOBILE ONLY */
+          position: relative;
+          width: 100%;
+          padding-bottom: 15px;
+          text-align: center;
+          border-right: none; }
+          body main aside h1 {
+            text-align: left; }
+          body main aside ul {
+            display: flex;
+            flex-direction: column; }
+            body main aside ul li {
+              font-size: 1.1em;
+              display: inline-block;
+              border-left: none; }
+              body main aside ul li:hover {
+                background: #ffffff;
+                border-left-color: none; }
+            body main aside ul #active-side {
+              border-left: none;
+              background: #0e798b;
+              color: #ffffff; } }
+      @media (max-width: 64em) {
+        body main aside {
+          /* TABLET ONLY */
+          position: relative;
+          width: 100%;
+          padding-bottom: 15px;
+          text-align: center;
+          border-right: none; }
+          body main aside h1 {
+            text-align: left; }
+          body main aside ul {
+            display: flex;
+            flex-direction: column; }
+            body main aside ul #active-side {
+              border-left: none;
+              background: #0e798b;
+              color: #ffffff; } }
     body main article#info {
       width: 100%;
       margin: 0;
@@ -141,12 +219,31 @@ body {
           background: #f29323;
           color: #ffffff;
           text-transform: uppercase; }
+        @media (max-width: 40em) {
+          body main article#info #infoNav {
+            /* BP MOBILE ONLY */
+            position: relative;
+            width: 100%;
+            padding-bottom: 15px;
+            text-align: center; }
+            body main article#info #infoNav ul {
+              display: flex;
+              flex-direction: column; }
+              body main article#info #infoNav ul li {
+                font-size: 1.1em;
+                border-right: none; }
+                body main article#info #infoNav ul li a {
+                  width: 100%;
+                  border-right: none;
+                  border-bottom: 1px solid #e0e0e0;
+                  padding: 18px 0; } }
       body main article#info .theEvent {
         margin: 0;
         padding: 0;
         border-bottom: 1px solid #e0e0e0;
         /* Dialog Pop Up */
-        /* 	overflow: hidden; to disable scroll whil this is on screen */ }
+        /* 	overflow: hidden; to disable scroll whil this is on screen */
+        /* Breakpoint Mobile */ }
         body main article#info .theEvent #dialogPopUp {
           overflow: hidden;
           position: absolute;
@@ -230,6 +327,28 @@ body {
                 body main article#info .theEvent figure figcaption .schedule .cols .col-2 {
                   width: 50%;
                   float: right; }
+        @media (max-width: 40em) {
+          body main article#info .theEvent {
+            width: 100%; }
+            body main article#info .theEvent figure img {
+              display: block;
+              margin: 0 auto; }
+            body main article#info .theEvent figure figcaption {
+              width: 100%;
+              text-align: center;
+              display: block;
+              margin: auto;
+              word-break: keep-all;
+              margin: 10px 0; }
+              body main article#info .theEvent figure figcaption h1 {
+                padding: 15px; }
+                body main article#info .theEvent figure figcaption h1 a {
+                  display: inline-block; }
+              body main article#info .theEvent figure figcaption .schedule {
+                margin-bottom: 25px;
+                text-align: center; }
+                body main article#info .theEvent figure figcaption .schedule__title {
+                  display: block; } }
       body main article#info #eventContent {
         margin: 0;
         padding: 0;
@@ -240,6 +359,18 @@ body {
           flex-wrap: wrap;
           flex-direction: row;
           /* Sections with borders */ }
+          @media (max-width: 40em) {
+            body main article#info #eventContent .bst-col {
+              display: block;
+              padding: 10px; } }
+          @media (max-width: 64em) {
+            body main article#info #eventContent .bst-col {
+              display: block;
+              padding: 10px; } }
+          @media (max-width: 70em) {
+            body main article#info #eventContent .bst-col {
+              display: block;
+              padding: 10px; } }
           body main article#info #eventContent .bst-col__one, body main article#info #eventContent .bst-col__two, body main article#info #eventContent .bst-col__three {
             display: block; }
             body main article#info #eventContent .bst-col__one h1, body main article#info #eventContent .bst-col__two h1, body main article#info #eventContent .bst-col__three h1 {
@@ -262,6 +393,18 @@ body {
               background-repeat: no-repeat;
               background-position: right;
               background-size: contain; }
+            @media (max-width: 40em) {
+              body main article#info #eventContent .bst-col .best-selling-tickets, body main article#info #eventContent .bst-col .quick-settings,
+              body main article#info #eventContent .bst-col .achievement-results, body main article#info #eventContent .bst-col .reports, body main article#info #eventContent .bst-col .attendance {
+                width: 100%; } }
+            @media (max-width: 64em) {
+              body main article#info #eventContent .bst-col .best-selling-tickets, body main article#info #eventContent .bst-col .quick-settings,
+              body main article#info #eventContent .bst-col .achievement-results, body main article#info #eventContent .bst-col .reports, body main article#info #eventContent .bst-col .attendance {
+                width: 100%; } }
+            @media (max-width: 70em) {
+              body main article#info #eventContent .bst-col .best-selling-tickets, body main article#info #eventContent .bst-col .quick-settings,
+              body main article#info #eventContent .bst-col .achievement-results, body main article#info #eventContent .bst-col .reports, body main article#info #eventContent .bst-col .attendance {
+                width: 100%; } }
           body main article#info #eventContent .bst-col .best-selling-tickets .el {
             width: 100%;
             display: flex;
@@ -326,6 +469,7 @@ body {
               body main article#info #eventContent .bst-col .best-selling-tickets .el .rightOutputData .outofstock {
                 color: #1c1c1c; }
               body main article#info #eventContent .bst-col .best-selling-tickets .el .rightOutputData .tooltip {
+                display: none;
                 position: absolute;
                 margin-top: 7px;
                 margin-left: 30px;
@@ -389,6 +533,22 @@ body {
               background: #ffffff; }
             body main article#info #eventContent .bst-col .best-selling-tickets .el:nth-child(even) {
               background: #f9f9f9; }
+          @media (max-width: 40em) {
+            body main article#info #eventContent .bst-col .best-selling-tickets .el {
+              margin: 0;
+              padding: 0; }
+              body main article#info #eventContent .bst-col .best-selling-tickets .el .leftOutputData {
+                width: 100%;
+                text-align: center;
+                display: block; }
+                body main article#info #eventContent .bst-col .best-selling-tickets .el .leftOutputData .icon {
+                  float: none;
+                  display: block;
+                  margin: 20px auto; }
+              body main article#info #eventContent .bst-col .best-selling-tickets .el .rightOutputData {
+                width: 100%;
+                margin: 0 auto;
+                text-align: center; } }
           body main article#info #eventContent .bst-col .quick-settings .el {
             padding: 20px 10px;
             font-size: .8em;
@@ -412,6 +572,9 @@ body {
             body main article#info #eventContent .bst-col .quick-settings .el p {
               display: block;
               margin: 13px auto; }
+              @media (max-width: 40em) {
+                body main article#info #eventContent .bst-col .quick-settings .el p {
+                  line-height: 1.7em; } }
           body main article#info #eventContent .bst-col .quick-settings .qs-footer {
             background: #f6f6f6; }
             body main article#info #eventContent .bst-col .quick-settings .qs-footer ul {
@@ -432,6 +595,16 @@ body {
                   font-weight: 600;
                   margin-right: 150px;
                   float: right; }
+            @media (max-width: 40em) {
+              body main article#info #eventContent .bst-col .quick-settings .qs-footer ul li {
+                display: block;
+                padding: 10px;
+                text-align: left; }
+                body main article#info #eventContent .bst-col .quick-settings .qs-footer ul li strong {
+                  text-align: left; }
+                body main article#info #eventContent .bst-col .quick-settings .qs-footer ul li span {
+                  text-align: right;
+                  float: none; } }
           body main article#info #eventContent .bst-col .achievement-results {
             background: #14b2cc;
             float: left; }
@@ -450,6 +623,9 @@ body {
                   margin: 0;
                   padding: 35px 0;
                   text-align: center; }
+                  @media (max-width: 40em) {
+                    body main article#info #eventContent .bst-col .achievement-results .results ul li {
+                      width: 100%; } }
                   body main article#info #eventContent .bst-col .achievement-results .results ul li .value {
                     font-size: 1.75em;
                     display: block;
@@ -458,8 +634,9 @@ body {
                     font-weight: 600;
                     text-shadow: 2px 2px 1px #505050;
                     border-right: 1px solid #e4e4e4; }
-                    body main article#info #eventContent .bst-col .achievement-results .results ul li .value:last-of-type {
-                      border-right: none; }
+                    @media (max-width: 40em) {
+                      body main article#info #eventContent .bst-col .achievement-results .results ul li .value {
+                        border-right: none; } }
                   body main article#info #eventContent .bst-col .achievement-results .results ul li .achievement {
                     color: #e4e4e4; }
           body main article#info #eventContent .bst-col .reports {
@@ -537,10 +714,16 @@ body {
               body main article#info #eventContent .bst-col .attendance .el__email p.applied {
                 font-size: .85em;
                 color: #909090; }
+            @media (max-width: 40em) {
+              body main article#info #eventContent .bst-col .attendance .el {
+                text-align: center; }
+                body main article#info #eventContent .bst-col .attendance .el .left {
+                  width: 100%; }
+                body main article#info #eventContent .bst-col .attendance .el__email {
+                  width: 100%;
+                  text-align: center; } }
           body main article#info #eventContent .bst-col .social-media {
             border: 1px solid #e0e0e0;
-            width: 1000px;
-            max-width: 100%;
             display: block;
             margin: 25px auto;
             padding: 0;
@@ -581,6 +764,11 @@ body {
               body main article#info #eventContent .bst-col .social-media .bst-col__three--content:hover {
                 cursor: pointer;
                 background: #ecf0f1; }
+        @media (max-width: 40em) {
+          body main article#info #eventContent {
+            /* MOBILE ONLY */
+            display: block;
+            margin: 0 auto; } }
   body footer {
     background: #f2f2f2;
     clear: both;

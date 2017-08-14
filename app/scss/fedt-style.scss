@@ -6,6 +6,8 @@
 *******
  */
 
+@import 'mixins';
+
 /* Colors */
 $white 		: #ffffff;
 $dark 		: #1c1c1c;
@@ -29,12 +31,23 @@ $sunflower2	: #f39c12;
 
 $openSans	: 'Open Sans', sans-serif;
 
+/* Breakpoints */
+/* Mobile */
+$smallMin: 320px;
+$smallMax: 767px;
+
+/* Tablet / Notebooks */
+$mediumMin: 768px;
+$mediumMax: 1024px;
+
+/* Desktop */
+$desktopMin: 1025px;
+
+
 body {
 	font-family: $openSans;
 	margin: 0;
 	padding: 0;
-
-
 
 	/* Return to Main Page */
 	#return {
@@ -75,6 +88,18 @@ body {
 					padding: 10px 15px 0px 15px;
 					max-width: 100%;
 					float: left;
+					@include breakpoint(mobileonly) { /* BP MOBILE */
+						float: none;
+						display: block;
+						margin: 0 auto;
+						padding: 0;
+					}//bp-mobile
+					@include breakpoint(tablet) { /* TABLET MAX */
+						float: none;
+						display: block;
+						margin: 0 auto;
+						padding: 0;
+					}//TABLET
 				}//img
 			}//brand_logo
 
@@ -100,6 +125,12 @@ body {
 						&:hover {
 							background: $darkenNB;
 						}//hover
+						@include breakpoint(mobileonly) { /* BP MOBILE */
+							float: none;
+							display: inline-block;
+							width: 100%;
+							padding: 24px 16px;
+						}//bpmobile
 					}//a
 					#active-nav {
 						background: $darkenNB;
@@ -115,6 +146,12 @@ body {
 		padding: 0;
 		display: flex;
 		flex-direction: row;
+		@include breakpoint(mobileonly) { /* MOBILE ONLY */
+			flex-direction: column;
+		}//bpmobile
+		@include breakpoint(tablet) { /* TABLET ONLY */
+			flex-direction: column;
+		}//tablet
 		aside {
 			color: $navyBlue;
 			width: 320px;
@@ -149,6 +186,9 @@ body {
 						font-size: .9em;
 						padding: 10px 16px;
 						border-left: 7px solid transparent;
+
+						/* original bp here */
+
 						&:hover {
 							color: $navyBlue;
 							border-left-color: $navyBlue;
@@ -160,6 +200,53 @@ body {
 					border-left-color: $navyBlue;
 				}//active-side
 			}//ul
+			@include breakpoint(mobileonly) { /* MOBILE ONLY */
+				position: relative;
+				width: 100%;
+				padding-bottom: 15px;
+				text-align: center;
+				border-right: none;
+				h1 {
+					text-align: left;
+				}
+				ul {
+					display: flex;
+					flex-direction: column;
+					li {
+						font-size: 1.1em;
+						display: inline-block;
+						border-left: none;
+						&:hover {
+							background: $white;
+							border-left-color: none;
+						}//hover
+					}//ul li
+					#active-side {
+						border-left: none;
+						background: $navyBlue;
+						color: $white;
+					}//active-side
+				}//ul
+			}//bpmobile
+			@include breakpoint(tablet) { /* TABLET ONLY */
+				position: relative;
+				width: 100%;
+				padding-bottom: 15px;
+				text-align: center;
+				border-right: none;
+				h1 {
+					text-align: left;
+				}//h1
+				ul {
+					display: flex;
+					flex-direction: column;
+					#active-side {
+						border-left: none;
+						background: $navyBlue;
+						color: $white;
+					}//active-side					
+				}//ul
+			}//tablet
 		}//aside
 
 		article#info {
@@ -200,6 +287,26 @@ body {
 					color: $white;
 					text-transform: uppercase;
 				}//active-info
+				@include breakpoint(mobileonly) { /* BP MOBILE ONLY */
+					position: relative;
+					width: 100%;
+					padding-bottom: 15px;
+					text-align: center;
+					ul {
+						display: flex;
+						flex-direction: column;
+						li {
+							font-size: 1.1em;
+							border-right: none;
+							a {
+								width: 100%;
+								border-right: none;
+								border-bottom: 1px solid $borderG;
+								padding: 18px 0;
+							}//a
+						}//li
+					}//ul
+				}//mobileonly
 			}//infoNav
 			/* Content Event Header */
 			.theEvent {
@@ -321,6 +428,39 @@ body {
 						}//schedule
 					}//figcaption
 				}//figure
+
+				/* Breakpoint Mobile */
+				@include breakpoint(mobileonly) {
+					width: 100%;
+					figure {
+						img {
+							display: block;
+							margin: 0 auto;
+						}//img
+						figcaption {
+							width: 100%;
+							text-align: center;
+							display: block;
+							margin: auto;
+							word-break: keep-all;
+							margin: 10px 0;
+							h1 {
+								padding: 15px;
+								a {
+									display: inline-block;
+								}//a
+							}//h1
+							.schedule {
+								margin-bottom: 25px;
+								text-align: center;
+								&__title {
+									display: block;
+								}//title
+							}//schedule
+						}//figcaption
+					}//figure
+				}//mobileonly
+
 			}//theEvent
 
 			/* Content Main - 2 Columns */
@@ -334,6 +474,21 @@ body {
 					display: flex;
 					flex-wrap: wrap;
 					flex-direction: row;
+
+					@include breakpoint(mobileonly) {
+						display: block;
+						padding: 10px;
+					}//mobile
+
+					@include breakpoint(tablet) {
+						display: block;
+						padding: 10px;
+					}//tablet
+
+					@include breakpoint(laptop) {
+						display: block;
+						padding: 10px;
+					}//laptop
 
 					&__one, &__two, &__three {
 						display: block;
@@ -362,6 +517,16 @@ body {
 							background-position: right;
 							background-size: contain;
 						}//h1
+
+						@include breakpoint(mobileonly) {
+							width: 100%;
+						}//mobile
+						@include breakpoint(tablet) {
+							width: 100%;
+						}//tablet	
+						@include breakpoint(laptop) {
+							width: 100%;
+						}//tablet				
 					}//best-selling-tickets,quick-settings
 
 					.best-selling-tickets {
@@ -444,6 +609,7 @@ body {
 
 								/* Popup tooltip */
 								.tooltip {
+									display: none;
 									position: absolute;
 									margin-top: 7px;
 									margin-left: 30px;
@@ -525,6 +691,27 @@ body {
 								background: lighten($gray, 1%);
 							}//nth-child
 						}//el
+						@include breakpoint(mobileonly) {
+							.el {
+								margin: 0;
+								padding: 0;
+								.leftOutputData {
+									width: 100%;
+									text-align: center;
+									display: block;
+									.icon {
+										float: none;
+										display: block;
+										margin: 20px auto;
+									}//icon
+								}//leftOutputData
+								.rightOutputData {
+									width: 100%;
+									margin: 0 auto;
+									text-align: center;
+								}//rightOutputData
+							}//el
+						}//mobile
 					}//best-selling-tickets
 
 					.quick-settings {
@@ -554,6 +741,9 @@ body {
 							p {
 								display: block;
 								margin: 13px auto;
+								@include breakpoint(mobileonly) {
+									line-height: 1.7em;
+								}//mobileonly
 							}//p
 						}//el
 						.qs-footer {
@@ -581,6 +771,20 @@ body {
 									}//span
 								}//li
 							}//ul
+							@include breakpoint(mobileonly) {
+								ul li {
+									display: block;
+									padding: 10px;
+									text-align: left;
+									strong {
+										text-align: left;
+									}
+									span {
+										text-align: right;
+										float: none;
+									}//span
+								}//ul li
+							}//mobileonly
 						}//qs-footer
 					}//quick-settings
 
@@ -602,6 +806,9 @@ body {
 									margin: 0;
 									padding: 35px 0;
 									text-align: center;
+									@include breakpoint(mobileonly) {
+										width: 100%;
+									}//mobileonly
 									.value {
 										font-size: 1.75em;
 										display: block;
@@ -610,9 +817,9 @@ body {
 										font-weight: 600;
 										text-shadow: 2px 2px 1px darken($gray, 65%);
 										border-right: 1px solid darken($gray, 7%);
-										&:last-of-type {
+										@include breakpoint(mobileonly) {
 											border-right: none;
-										}//lastoftype
+										}//mobileonly
 									}//value
 									.achievement {
 										color: darken($gray, 7%);
@@ -717,13 +924,23 @@ body {
 									color: darken($gray, 40%);
 								}//p
 							}//email
+
+							@include breakpoint(mobileonly) {
+								text-align: center;
+								.left {
+									width: 100%;
+								}//.left
+								&__email {
+									width: 100%;
+									text-align: center;
+								}//email
+							}//mobileonly
+
 						}//el
 					}//attendance
 
 					.social-media {
 						border: 1px solid $borderG;
-						width: 1000px;
-						max-width: 100%;
 						display: block;
 						margin: 25px auto;
 						padding: 0;
@@ -775,6 +992,14 @@ body {
 						}//content
 					}//social-media
 				}//bst-col
+				@include breakpoint(mobileonly) { /* MOBILE ONLY */
+					display: block;
+					margin: 0 auto;
+					.best-selling-tickets,.quick-settings,
+					.achievement-results, .reports, .attendance {
+						
+					}//.best-selling-tickets,.quick-settings,...
+				}//mobileonly
 			}//eventContent
 		}//article#info
 	}//main

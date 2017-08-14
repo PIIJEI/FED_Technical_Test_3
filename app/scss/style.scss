@@ -6,14 +6,20 @@
 *******
  */
 
+ @import "mixins";
+
 /* Colors */
 $white 		: #ffffff;
 $dark 		: #1c1c1c;
 $clouds		: #ecf0f1;
 $silver		: #bdc3c7;
-$gray  		: #f1f8f9;
+$vLightBlue : #f1f8f9;
+$gray		: #f6f6f6;
+$gray2		: #f2f2f2;
+$borderG    : #e0e0e0;
 $lightGray	: #e7e7e7;
 $navyBlue	: #0e798b;
+$darkenNB 	: #0b5c6a;
 $lightBlue	: #14b2cc;
 $orange		: #f29323;
 $orangeO	: #f8c991;
@@ -24,6 +30,18 @@ $sunflower	: #f1c40f;
 $sunflower2	: #f39c12;
 
 $openSans	: 'Open Sans', sans-serif;
+
+/* Breakpoints */
+/* Mobile */
+$smallMin: 320px;
+$smallMax: 767px;
+
+/* Tablet / Notebooks */
+$mediumMin: 768px;
+$mediumMax: 1024px;
+
+/* Desktop */
+$desktopMin: 1025px;
 
 body {
 	font-family: $openSans;

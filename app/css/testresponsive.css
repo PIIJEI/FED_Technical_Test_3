@@ -1,0 +1,11 @@
+/* Breakpoints */
+/* Mobile */
+/* Tablet / Notebooks */
+/* Desktop */
+/*********************
+BREAKPOINTS
+*********************/
+/* Colors */
+@media (max-width: 37.5em) {
+  body header {
+    background: red; } }

@@ -120,7 +120,7 @@
 			</div>
 		</div>
 
-			<figure role="figure">
+			<figure id="figureEvent" role="figure">
 				<img src="../../images/header_img.png" alt="armada music" title="Armada Deep Beach Party">
 				<!-- <span id="testimg"></span> -->
 				<figcaption>
@@ -202,16 +202,16 @@
 										<!-- Output Results -->
 										<p class="downrate">12 sold since Jan 17</p>
 										<span>20% less sold than last period</span>
-										<span id="salesPopUp" class="fa fa-info-circle"></span>
+										<span id="salesPopUp" class="fa fa-info-circle" onclick="popUpTip()"></span>
 
 
 										<!-- Tooltip -->
-										<div class="tooltip">
+										<div id="pop-up-tip" class="tooltip">
 											<span class="tooltiptext">
 												<p>Try adding a promo code to drive sales.</p>
 												<a href="#" onclick="return false">Add Promo code</a>
 											</span>
-											<span id="closeArrow">x</span>
+											<span id="closeArrow" onclick="closeTip()">x</span>
 										</div>
 
 
@@ -322,7 +322,7 @@
 									<span class="achievement">tickets sold</span>
 								</li>
 								<li>
-									<span class="value">648</span>
+									<span class="value" style="border-right: none;">648</span>
 									<span class="achievement">guests</span>
 								</li>
 							</ul>
@@ -341,14 +341,11 @@
 								<li id="tickets">Tickets</li>
 							</ul>
 							<div id="graph">
-								
 								<div id="graph__sales">
-									
-									<img class="displayHidden" src="../../images/graph_sales.png" alt="graph sales" title="Graph Sales">
+									<img src="../../images/graph_sales.png" alt="graph sales" title="Graph Sales">
 								</div>
 								
-								<div id="graph__tickets">
-									
+								<div id="graph__tickets" class="displayHidden">
 									<img src="../../images/graph_tickets.png" alt="graph sales" title="Graph Sales">
 								</div>
 							</div>
@@ -452,7 +449,7 @@
 </footer>
 
 <!-- Scripts -->
-<script type="text/javascript" src="../../js/script.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/script.js"></script>
 </body>
 </html>

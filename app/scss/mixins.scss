@@ -1,0 +1,33 @@
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  } //before, after
+  &:after {
+    clear: both;
+  } //after
+} //clearfix
+
+/*********************
+BREAKPOINTS
+*********************/
+
+ @mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: 70em) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (max-width: 70em) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (max-width: 64em) { @content ; }
+  }
+   @else if $point == phablet {
+     @media (min-width: 40em)  { @content ; }
+  }
+  @else if $point == mobileonly {
+     @media (max-width: 40em)  { @content ; }
+
+  }
+}
