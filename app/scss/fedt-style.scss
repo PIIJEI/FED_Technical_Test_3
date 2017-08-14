@@ -34,6 +34,8 @@ body {
 	margin: 0;
 	padding: 0;
 
+
+
 	/* Return to Main Page */
 	#return {
 		background: $dark;
@@ -118,8 +120,9 @@ body {
 			width: 320px;
 			max-width: 100%;
 			background:$vLightBlue;
-			height: 100vh;
+			height: auto;
 			border-right: 1px solid $borderG;
+			border-bottom: 1px solid $borderG;
 			h1 {
 				font-size: 1.45em;
 				padding: 14px 16px;
@@ -203,6 +206,44 @@ body {
 				margin: 0;
 				padding: 0;
 				border-bottom: 1px solid $borderG;
+
+
+
+
+				/* Dialog Pop Up */
+
+				/* 	overflow: hidden; to disable scroll whil this is on screen */
+				#dialogPopUp {
+					overflow: hidden;
+					position: absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					right: 0;
+					background: rgba(0,0,0, .5);
+					z-index: 10;
+					display: none;
+					.content {
+						background: $white;
+						color: $dark;
+						width: 50%;
+						height: auto;
+						position: absolute;
+						text-align: center;
+						padding: 125px 45px;
+						font-weight: 600;
+						font-size: 1.15em;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+					}//content
+				}//dialogPopUp
+
+
+
+
+
+
 				figure {
 					margin: 0;
 					padding: 10px;
@@ -308,8 +349,7 @@ body {
 
 					/* Sections with borders */
 					.best-selling-tickets,.quick-settings,
-					.achievement-results, .reports, .attendance,
-					.bst-col__three--title {
+					.achievement-results, .reports, .attendance {
 						border: 1px solid $borderG;
 						width: 480px;
 						max-width: 100%;
@@ -399,6 +439,83 @@ body {
 								.outofstock {
 									color: $dark;
 								}//outofstock
+
+
+
+								/* Popup tooltip */
+								.tooltip {
+									position: absolute;
+									margin-top: 7px;
+									margin-left: 30px;
+									background: $orange;
+									padding: 17px 24px;
+
+									box-shadow: 4px 4px 0px 0px darken($gray2, 5%);
+									.tooltiptext {
+										text-align: left;
+										margin: 0;
+										padding: 0;
+										p {
+											color: $white;
+											width: 150px;
+											font-size: 1.1em;
+											letter-spacing: 0.05em;
+											line-height: 1.4em;
+											text-shadow: 1px 1px 0px lighten($dark, 30%);
+											margin-bottom: 18px;
+										}//p
+										a {
+											text-decoration: none;
+											background: $white;
+											color: $orange;
+											font-size: 1em;
+											position: relative;
+											left: 13px;
+											padding: 4px 12px;
+											border-radius: 3px;
+											border: 2px solid transparent;
+											&:hover {
+												background: $orange;
+												color: $white;
+												border-color: $white;
+											}//hover
+										}//a
+									}//tooltiptext
+									#closeArrow {
+										display: block;
+										color: $orange;
+										background: $white;
+										border: 2px solid $orange;
+										font-size: .9em;
+										width: 17px;
+										height: 17px;
+										padding: 3px;
+										text-align: center;
+										position: absolute;
+										top: -10px;
+										right: -10px;
+										border-radius: 50%;
+										&:hover {
+											background: $orange;
+											color: $white;
+											cursor: pointer;
+										}//hover
+									}//closeArrow
+
+									&:after {
+										content: '';
+										position: absolute;
+										bottom: 100%;
+										left: 73.5%;
+										margin-left: -5px;
+										border-width: 8px;
+										border-style: solid;
+										border-color: transparent transparent $orange transparent;
+									}//after
+								}//tooltip
+
+
+
 							}//rightOutputData
 
 							&:nth-child(odd) {
@@ -493,6 +610,9 @@ body {
 										font-weight: 600;
 										text-shadow: 2px 2px 1px darken($gray, 65%);
 										border-right: 1px solid darken($gray, 7%);
+										&:last-of-type {
+											border-right: none;
+										}//lastoftype
 									}//value
 									.achievement {
 										color: darken($gray, 7%);
@@ -505,6 +625,9 @@ body {
 					.reports {
 						clear: both;
 						margin-top: 100px;
+						.displayHidden {
+							display: none;
+						}//displayHidden
 						ul {
 							margin: 0;
 							padding:10px;
@@ -532,22 +655,132 @@ body {
 
 					.attendance {
 						.el {
-							width: 100%;
+							display: flex;
+							flex-wrap: wrap;
+							flex-direction: row;
+							margin: 0;
 							padding: 10px 0;
+							width: 100%;
 							&:nth-child(even) {
 								background: $gray;
 							}//even(nth)
 							&:nth-child(odd) {
 								background: $white;
-							}
+							}//nth-child(odd)
+
+							.left {
+								width:50%;
+								margin: 0;
+								padding: 0;
+								&__header {
+									color: $dark;
+									font-size: .7em;
+									h2 {
+										margin: 5px 10px;
+									}//h1
+								}//header
+								&__buttons {
+									margin: 16px 10px;
+									padding: 0;
+									span {
+										a {
+											color: $dark;
+											background: darken($gray, 5%);
+											font-size: .7em;
+											letter-spacing: 0.05em;
+											padding: 10px 14px;
+											text-decoration: none;
+											&:hover{
+												background: $orangeO;
+												color: $white;
+											}//hover
+										}//a
+									}//a
+								}//buttons
+							}//left
+
+							
+							&__email {
+								width: 47%;
+								text-align: right;
+							    padding-right: 14px;
+								display: block;
+								margin: 0;
+								padding: 10px 0;
+								font-size: .75em;
+								a {
+									color: $lightBlue;
+									margin-left: 3%;
+								}
+								p.applied {
+									font-size: .85em;
+									color: darken($gray, 40%);
+								}//p
+							}//email
 						}//el
 					}//attendance
+
+					.social-media {
+						border: 1px solid $borderG;
+						width: 1000px;
+						max-width: 100%;
+						display: block;
+						margin: 25px auto;
+						padding: 0;
+						box-shadow: 4px 4px 0px 0px $gray2;
+						h1 {
+							margin: 0; 
+							background-image: url('../../images/headerel.png');
+							background-repeat: no-repeat;
+							background-position: right;
+							background-size: contain;
+						}//h1
+						.bst-col__three--content {
+							display: flex;
+							flex-direction: row;
+							.left {
+								float: left;
+								span {
+									float: left;
+									padding: 12px 0;
+									margin: 0 10px;
+									color: $lightBlue;
+									font-size: 1.2em;
+								}//span icon
+								h2 {
+									font-size: 1em;
+									color: $lightBlue;
+								}//h2
+								p {
+									padding: 3px;
+									margin: 9px 0px 15px 33px; 
+									width: 75%;
+									line-height: 1.4em;
+									letter-spacing: 0.05em;
+									font-size: .75em;
+									color: darken($gray, 30%);
+								}//p
+							}//left
+							.right {
+								padding: 25px;
+								img {
+									width: 80%;
+									overflow: hidden;
+								}//img
+							}//right
+							&:hover {
+								cursor: pointer;
+								background: $clouds;
+							}//content hover
+						}//content
+					}//social-media
 				}//bst-col
 			}//eventContent
 		}//article#info
 	}//main
 
 	footer {
+		background: $gray2;
 		clear: both;
 		width: 100%;
 		position: relative;
@@ -556,14 +789,18 @@ body {
 		font-size: .75em;
 		color: $inactive;
 		letter-spacing: 0.05em;
-		margin-top: 25px;
-		a {
-			text-decoration: none;
-			color: $inactive;
-			&:hover {
-				color: darken($inactive, 10%);
-				text-decoration: underline;
-			}//hover
-		}//a
+		p{
+		margin: 0;
+		padding: 20px;
+		font-size: .85em;
+			a {
+				text-decoration: none;
+				color: $inactive;
+				&:hover {
+					color: darken($inactive, 10%);
+					text-decoration: underline;
+				}//hover
+			}//a
+		}//p
 	}//footer
 }//body

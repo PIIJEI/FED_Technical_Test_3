@@ -112,13 +112,21 @@
 		</section>
 
 		<section id="eventHeader" class="theEvent">
+
+		<!-- Dialog -->
+		<div id="dialogPopUp" onclick="dialogClose()">
+			<div class="content">
+				<p>Close test dialog by clicking on anything. or pressing ESC.</p>
+			</div>
+		</div>
+
 			<figure role="figure">
 				<img src="../../images/header_img.png" alt="armada music" title="Armada Deep Beach Party">
 				<!-- <span id="testimg"></span> -->
 				<figcaption>
 					<!-- a href onclick will have a window pop up function (JS) -->
 					<h1>HYPER Festival LAUNCH PARTY 
-						<a id="dialog" href="#" onclick="return false">
+						<a id="dialog" href="#" onclick="dialog()">
 					 		<span class="fa fa-eye"></span> Open dialog
 						</a>
 					</h1>
@@ -195,6 +203,18 @@
 										<p class="downrate">12 sold since Jan 17</p>
 										<span>20% less sold than last period</span>
 										<span id="salesPopUp" class="fa fa-info-circle"></span>
+
+
+										<!-- Tooltip -->
+										<div class="tooltip">
+											<span class="tooltiptext">
+												<p>Try adding a promo code to drive sales.</p>
+												<a href="#" onclick="return false">Add Promo code</a>
+											</span>
+											<span id="closeArrow">x</span>
+										</div>
+
+
 									</div>
 								</div>
 
@@ -324,7 +344,7 @@
 								
 								<div id="graph__sales">
 									
-									<img src="../../images/graph_sales.png" alt="graph sales" title="Graph Sales">
+									<img class="displayHidden" src="../../images/graph_sales.png" alt="graph sales" title="Graph Sales">
 								</div>
 								
 								<div id="graph__tickets">
@@ -344,50 +364,57 @@
 						
 						<div class="bst-col__two--content">
 							<div class="el">
-								<div class="el__header">
-									<h2>Adult - General</h2>
-								</div>
+								<div class="left">
+									<div class="left__header">
+										<h2>Adult - General</h2>
+									</div>
 
-								<div class="el__buttons">
-									<span><a href="#" onclick="return false">View</a></span>
-									<span><a href="#" onclick="return false">Order Details</a></span>
+									<div class="left__buttons">
+										<span><a href="#" onclick="return false">View</a></span>
+										<span><a href="#" onclick="return false">Order Details</a></span>
+									</div>
 								</div>
 
 								<div class="el__email">
 									<p>John Doe <span><a href="#" onclick="return false">&lt;johndoe@gmail.com&gt; &#9662;</a></span></p>
-									<p>Applied: 13th May 2014 at 10:27</p>
+									<p class="applied">Applied: 13th May 2014 at 10:27</p>
+								</div>
+
+							</div>
+
+							<div class="el">
+								<div class="left">
+									<div class="left__header">
+										<h2>Child Ticket - General</h2>
+									</div>
+
+									<div class="left__buttons">
+										<span><a href="#" onclick="return false">View</a></span>
+										<span><a href="#" onclick="return false">Order Details</a></span>
+									</div>
+								</div>
+
+								<div class="el__email">
+									<p>John Doe <span><a href="#" onclick="return false">&lt;johndoe@gmail.com&gt; &#9662;</a></span></p>
+									<p class="applied">Applied: 13th May 2014 at 10:27</p>
 								</div>
 							</div>
 
 							<div class="el">
-								<div class="el__header">
-									<h2>Child Ticket - General</h2>
-								</div>
+								<div class="left">
+									<div class="left__header">
+										<h2>Child Ticket - General</h2>
+									</div>
 
-								<div class="el__buttons">
-									<span><a href="#" onclick="return false">View</a></span>
-									<span><a href="#" onclick="return false">Order Details</a></span>
-								</div>
-
-								<div class="el__email">
-									<p>John Doe <span><a href="#" onclick="return false">&lt;johndoe@gmail.com&gt; &#9662;</a></span></p>
-									<p>Applied: 13th May 2014 at 10:27</p>
-								</div>
-							</div>
-
-							<div class="el">
-								<div class="el__header">
-									<h2>Child Ticket - General</h2>
-								</div>
-
-								<div class="el__buttons">
-									<span><a href="#" onclick="return false">View</a></span>
-									<span><a href="#" onclick="return false">Order Details</a></span>
+									<div class="left__buttons">
+										<span><a href="#" onclick="return false">View</a></span>
+										<span><a href="#" onclick="return false">Order Details</a></span>
+									</div>
 								</div>
 
 								<div class="el__email">
 									<p>John Doe <span><a href="#" onclick="return false">&lt;johndoe@gmail.com&gt; &#9662;</a></span></p>
-									<p>Applied: 13th May 2014 at 10:27</p>
+									<p class="applied">Applied: 13th May 2014 at 10:27</p>
 								</div>
 							</div>
 
@@ -397,12 +424,21 @@
 				</div>
 
 				<!-- Column 3 - Full -->
-				<div class="bst-col bst-col__three">
+				<div class="social-media bst-col bst-col__three">
 					<div class="bst-col__three--title">
 						<h1>Facebook Guest List Registration</h1>
 					</div>
-					<div class="bst-col__three--content">
-						
+					<div class="bst-col__three--content" onclick="alert('You have added a Facebook Guest List!')">
+						<div class="left">
+							<span class="fa fa-dot-circle-o"></span>
+							<h2>Publish on Facebook</h2>
+							<p>You can post to one of your Facebook Pages allowing your customers to register 
+							for a guest list with one click.
+							There are no Facebook Guest lists for this event, to add a Facebook Guest list, click here.</p>
+						</div>
+						<div class="right">
+							<img src="../../images/facebook.png" alt="social media facebook" title="Share on Facebook">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -416,6 +452,7 @@
 </footer>
 
 <!-- Scripts -->
+<script type="text/javascript" src="../../js/script.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 </html>
