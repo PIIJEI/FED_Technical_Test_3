@@ -226,8 +226,10 @@ body {
           body main article#info #eventContent .bst-col .achievement-results, body main article#info #eventContent .bst-col .reports, body main article#info #eventContent .bst-col .attendance,
           body main article#info #eventContent .bst-col .bst-col__three--title {
             border: 1px solid #e0e0e0;
-            width: 425px;
-            margin: 25px 0; }
+            width: 480px;
+            max-width: 100%;
+            margin: 25px 0;
+            box-shadow: 4px 4px 0px 0px #f2f2f2; }
             body main article#info #eventContent .bst-col .best-selling-tickets h1, body main article#info #eventContent .bst-col .quick-settings h1,
             body main article#info #eventContent .bst-col .achievement-results h1, body main article#info #eventContent .bst-col .reports h1, body main article#info #eventContent .bst-col .attendance h1,
             body main article#info #eventContent .bst-col .bst-col__three--title h1 {
@@ -236,41 +238,176 @@ body {
               background-repeat: no-repeat;
               background-position: right;
               background-size: contain; }
-          body main article#info #eventContent .bst-col .best-selling-tickets .el .el-list .leftOutputData {
-            background: red;
-            margin: 0;
-            padding: 0; }
-            body main article#info #eventContent .bst-col .best-selling-tickets .el .el-list .leftOutputData .icon {
+          body main article#info #eventContent .bst-col .best-selling-tickets .el {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            padding: 10px 0; }
+            body main article#info #eventContent .bst-col .best-selling-tickets .el .leftOutputData {
+              width: 50%; }
+              body main article#info #eventContent .bst-col .best-selling-tickets .el .leftOutputData .icon {
+                display: block;
+                content: '';
+                width: 50px;
+                height: 50px;
+                background: #f29323;
+                border-radius: 100%;
+                float: left;
+                margin: 10px; }
+              body main article#info #eventContent .bst-col .best-selling-tickets .el .leftOutputData h2 {
+                margin: 10px 0;
+                font-size: .9em; }
+              body main article#info #eventContent .bst-col .best-selling-tickets .el .leftOutputData .edit, body main article#info #eventContent .bst-col .best-selling-tickets .el .leftOutputData .viewSales {
+                text-align: center;
+                margin: 3px;
+                font-size: .85em;
+                text-decoration: none;
+                padding: 7px 12px;
+                display: inline-block;
+                background: #e9e9e9;
+                color: #1c1c1c; }
+                body main article#info #eventContent .bst-col .best-selling-tickets .el .leftOutputData .edit:hover, body main article#info #eventContent .bst-col .best-selling-tickets .el .leftOutputData .viewSales:hover {
+                  background: #f8c991;
+                  color: #ffffff; }
+              body main article#info #eventContent .bst-col .best-selling-tickets .el .leftOutputData .hidden {
+                color: #9c9c9c; }
+            body main article#info #eventContent .bst-col .best-selling-tickets .el .rightOutputData {
               display: block;
-              content: '';
-              width: 50px;
-              height: 50px;
-              background: #f29323;
-              border-radius: 100%;
+              margin: 0;
+              float: right;
+              width: 40%;
+              text-align: right;
+              padding: 20px 0; }
+              body main article#info #eventContent .bst-col .best-selling-tickets .el .rightOutputData p {
+                font-size: .9em;
+                margin: 0;
+                padding: 0;
+                color: #14b2cc;
+                font-weight: 600; }
+              body main article#info #eventContent .bst-col .best-selling-tickets .el .rightOutputData span {
+                font-size: .7em;
+                color: #828282;
+                font-weight: 600; }
+              body main article#info #eventContent .bst-col .best-selling-tickets .el .rightOutputData #salesPopUp {
+                padding: 5px;
+                color: #d0d0d0;
+                font-size: 1.2em; }
+                body main article#info #eventContent .bst-col .best-selling-tickets .el .rightOutputData #salesPopUp:hover {
+                  cursor: pointer;
+                  color: #f8c991; }
+              body main article#info #eventContent .bst-col .best-selling-tickets .el .rightOutputData .downrate {
+                color: #f29323; }
+              body main article#info #eventContent .bst-col .best-selling-tickets .el .rightOutputData .outofstock {
+                color: #1c1c1c; }
+            body main article#info #eventContent .bst-col .best-selling-tickets .el:nth-child(odd) {
+              background: #ffffff; }
+            body main article#info #eventContent .bst-col .best-selling-tickets .el:nth-child(even) {
+              background: #f9f9f9; }
+          body main article#info #eventContent .bst-col .quick-settings .el {
+            padding: 20px 10px;
+            font-size: .8em;
+            border-bottom: 1px solid #e0e0e0; }
+            body main article#info #eventContent .bst-col .quick-settings .el .checkboxBtn {
+              width: 16px;
+              height: 16px;
               float: left;
-              margin: 10px; }
-            body main article#info #eventContent .bst-col .best-selling-tickets .el .el-list .leftOutputData h2 {
-              margin: 10px 0;
-              font-size: .9em; }
-            body main article#info #eventContent .bst-col .best-selling-tickets .el .el-list .leftOutputData .edit, body main article#info #eventContent .bst-col .best-selling-tickets .el .el-list .leftOutputData .viewSales {
-              text-align: center;
-              margin: 3px;
-              font-size: .85em;
-              text-decoration: none;
-              padding: 7px 12px;
-              display: inline-block;
-              background: #e9e9e9;
-              color: #1c1c1c; }
-          body main article#info #eventContent .bst-col .best-selling-tickets .el .el-list .rightOutputData {
-            text-align: right; }
-          body main article#info #eventContent .bst-col .best-selling-tickets .el:nth-child(odd) {
-            background: #ffffff;
-            margin: 0;
-            padding: 25px 25px; }
-          body main article#info #eventContent .bst-col .best-selling-tickets .el:nth-child(even) {
-            background: #f6f6f6;
-            margin: 0;
-            padding: 25px 25px; }
+              margin: 5px;
+              background: #ffffff;
+              position: relative;
+              border: 1.5px solid #828282; }
+              body main article#info #eventContent .bst-col .quick-settings .el .checkboxBtn:hover {
+                background: #828282;
+                cursor: pointer; }
+            body main article#info #eventContent .bst-col .quick-settings .el label {
+              color: #14b2cc;
+              display: block;
+              margin: 7px auto;
+              font-weight: 600; }
+            body main article#info #eventContent .bst-col .quick-settings .el p {
+              display: block;
+              margin: 13px auto; }
+          body main article#info #eventContent .bst-col .quick-settings .qs-footer {
+            background: #f6f6f6; }
+            body main article#info #eventContent .bst-col .quick-settings .qs-footer ul {
+              margin: 0;
+              padding: 0;
+              list-style-type: none;
+              list-style-position: outside;
+              overflow: hidden; }
+              body main article#info #eventContent .bst-col .quick-settings .qs-footer ul li {
+                letter-spacing: 0.05em;
+                margin: 5px 0;
+                display: block; }
+                body main article#info #eventContent .bst-col .quick-settings .qs-footer ul li strong {
+                  color: #363636;
+                  font-weight: 600; }
+                body main article#info #eventContent .bst-col .quick-settings .qs-footer ul li span {
+                  color: #9c9c9c;
+                  font-weight: 600;
+                  margin-right: 150px;
+                  float: right; }
+          body main article#info #eventContent .bst-col .achievement-results {
+            background: #14b2cc;
+            float: left; }
+            body main article#info #eventContent .bst-col .achievement-results .results {
+              margin: 0;
+              padding: 0; }
+              body main article#info #eventContent .bst-col .achievement-results .results ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                list-style-position: outside;
+                width: 100%; }
+                body main article#info #eventContent .bst-col .achievement-results .results ul li {
+                  width: 33.33%;
+                  float: left;
+                  margin: 0;
+                  padding: 35px 0;
+                  text-align: center; }
+                  body main article#info #eventContent .bst-col .achievement-results .results ul li .value {
+                    font-size: 1.75em;
+                    display: block;
+                    margin-bottom: 8px;
+                    color: #ffffff;
+                    font-weight: 600;
+                    text-shadow: 2px 2px 1px #505050;
+                    border-right: 1px solid #e4e4e4; }
+                  body main article#info #eventContent .bst-col .achievement-results .results ul li .achievement {
+                    color: #e4e4e4; }
+          body main article#info #eventContent .bst-col .reports {
+            clear: both;
+            margin-top: 100px; }
+            body main article#info #eventContent .bst-col .reports ul {
+              margin: 0;
+              padding: 10px;
+              list-style-type: none;
+              list-style-position: outside;
+              overflow: hidden;
+              border-bottom: 1px dotted #e0e0e0; }
+              body main article#info #eventContent .bst-col .reports ul li {
+                float: left;
+                margin: 0 5px;
+                font-size: .8em;
+                letter-spacing: 0.05em;
+                color: #b6b6b6; }
+                body main article#info #eventContent .bst-col .reports ul li:hover {
+                  color: #14b2cc;
+                  cursor: pointer; }
+              body main article#info #eventContent .bst-col .reports ul .active-report {
+                color: #14b2cc; }
+            body main article#info #eventContent .bst-col .reports img {
+              width: 95%;
+              display: block;
+              margin: 0 auto;
+              padding: 10px 0; }
+          body main article#info #eventContent .bst-col .attendance .el {
+            width: 100%;
+            padding: 10px 0; }
+            body main article#info #eventContent .bst-col .attendance .el:nth-child(even) {
+              background: #f6f6f6; }
+            body main article#info #eventContent .bst-col .attendance .el:nth-child(odd) {
+              background: #ffffff; }
   body footer {
     clear: both;
     width: 100%;

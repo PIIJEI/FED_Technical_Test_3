@@ -311,8 +311,10 @@ body {
 					.achievement-results, .reports, .attendance,
 					.bst-col__three--title {
 						border: 1px solid $borderG;
-						width: 425px;
+						width: 480px;
+						max-width: 100%;
 						margin: 25px 0;
+						box-shadow: 4px 4px 0px 0px $gray2;
 						h1 {
 							margin: 0; 
 							background-image: url('../../images/headerel.png');
@@ -324,53 +326,222 @@ body {
 
 					.best-selling-tickets {
 						.el {
-							.el-list {
-								.leftOutputData {
-									background: red;
-									margin: 0;
-									padding: 0;
-									.icon {
-										display: block;
-										content: '';
-										width: 50px;
-										height: 50px;
-										background: $orange;
-										border-radius: 100%;
-										float: left;
-										margin: 10px;
-									}
-									h2 {
-										margin: 10px 0;
-										font-size: .9em;
-									}//h2
-									.edit, .viewSales {
-										text-align: center;
-										margin: 3px;
-										font-size: .85em;
-										text-decoration: none;
-										padding: 7px 12px;
-										display: inline-block;
-										background: darken($gray, 5%);
-										color: $dark;
-									}//edit,viewSales
-								}//leftOutputData
-								.rightOutputData {
-									text-align: right;
-								}//rightOutputData
+							width: 100%;
+							display: flex;
+							flex-wrap: wrap;
+							flex-direction: row;
+							padding: 10px 0;
+							.leftOutputData {
+								width:50%;
+								.icon {
+									display: block;
+									content: '';
+									width: 50px;
+									height: 50px;
+									background: $orange;
+									border-radius: 100%;
+									float: left;
+									margin: 10px;
+								}
+								h2 {
+									margin: 10px 0;
+									font-size: .9em;
+								}//h2
+								.edit, .viewSales {
+									text-align: center;
+									margin: 3px;
+									font-size: .85em;
+									text-decoration: none;
+									padding: 7px 12px;
+									display: inline-block;
+									background: darken($gray, 5%);
+									color: $dark;
+									&:hover {
+										background: $orangeO;
+										color: $white;
+									}//hover
+								}//edit,viewSales
+								.hidden {
+									color: lighten($dark, 50%);
+								}//hidden
+							}//leftOutputData
+							.rightOutputData {
+								display: block;
+								margin: 0;
+								float:right;
+								width: 40%;
+								text-align: right;
+								padding: 20px 0;
+								p {
+									font-size:.9em;
+									margin:0;
+									padding:0;
+									color: $lightBlue;
+									font-weight: 600;
+								}//p
+								span{
+									font-size:.7em;
+									color: lighten($dark, 40%);
+									font-weight: 600;
+								}//span
+								#salesPopUp {
+									padding: 5px;
+									color: darken($gray, 15%);
+									font-size: 1.2em;
+									&:hover {
+										cursor: pointer;
+										color: $orangeO;
+									}//hover
+								}//salesPopUp
+								.downrate {
+									color: $orange;
+								}//downrate
+								.outofstock {
+									color: $dark;
+								}//outofstock
+							}//rightOutputData
 
-							}//el-list
 							&:nth-child(odd) {
 								background: $white;
-								margin: 0;
-								padding: 25px 25px;
 							}//el-list
 							&:nth-child(even){
-								background: $gray;
-								margin: 0;
-								padding: 25px 25px;
+								background: lighten($gray, 1%);
 							}//nth-child
 						}//el
 					}//best-selling-tickets
+
+					.quick-settings {
+						.el {
+							padding: 20px 10px;
+							font-size: .8em;
+							border-bottom: 1px solid $borderG;
+							.checkboxBtn {
+								width: 16px;
+								height: 16px;
+								float: left;
+								margin: 5px;
+								background: $white;
+								position: relative;
+								border: 1.5px solid lighten($dark, 40%);
+								&:hover {
+									background: lighten($dark, 40%);
+									cursor: pointer;
+								}//hover
+							}//checkbox
+							label {
+								color: $lightBlue;
+								display: block;
+								margin: 7px auto;
+								font-weight: 600;
+							}//label
+							p {
+								display: block;
+								margin: 13px auto;
+							}//p
+						}//el
+						.qs-footer {
+							background: $gray;
+							ul {
+								margin: 0;
+								padding: 0;
+								list-style-type: none;
+								list-style-position: outside;
+								overflow: hidden;
+								li {
+									letter-spacing: 0.05em;
+									margin: 5px 0;
+									display: block;
+									strong {
+										color: lighten($dark, 10%);
+										font-weight: 600;
+									}//strong
+
+									span {
+										color: lighten($dark, 50%);
+										font-weight: 600;
+										margin-right: 150px;
+										float: right;
+									}//span
+								}//li
+							}//ul
+						}//qs-footer
+					}//quick-settings
+
+					.achievement-results {
+						background: $lightBlue;
+						float: left;
+						.results {
+							margin: 0; 
+							padding: 0;
+							ul {
+								margin: 0;
+								padding: 0;
+								list-style-type: none;
+								list-style-position: outside;
+								width: 100%;
+								li {
+									width:33.33%;
+									float: left;
+									margin: 0;
+									padding: 35px 0;
+									text-align: center;
+									.value {
+										font-size: 1.75em;
+										display: block;
+										margin-bottom: 8px;
+										color: $white;
+										font-weight: 600;
+										text-shadow: 2px 2px 1px darken($gray, 65%);
+										border-right: 1px solid darken($gray, 7%);
+									}//value
+									.achievement {
+										color: darken($gray, 7%);
+									}//achievement
+								}//li
+							}//ul
+						}//results
+					}//achievement-results
+
+					.reports {
+						clear: both;
+						margin-top: 100px;
+						ul {
+							margin: 0;
+							padding:10px;
+							list-style-type: none;
+							list-style-position: outside;
+							overflow: hidden;
+							border-bottom: 1px dotted $borderG;
+							li {
+								float: left;
+								margin: 0 5px;
+								font-size: .8em;
+								letter-spacing: 0.05em;
+								color: darken($gray, 25%);
+								&:hover {
+									color: $lightBlue;
+									cursor: pointer;
+								}//hover
+							}//li
+							.active-report {
+								color: $lightBlue;
+							}//active-report
+						}//ul
+						img{ width: 95%; display: block; margin: 0 auto; padding: 10px 0;}//img
+					}//reports
+
+					.attendance {
+						.el {
+							width: 100%;
+							padding: 10px 0;
+							&:nth-child(even) {
+								background: $gray;
+							}//even(nth)
+							&:nth-child(odd) {
+								background: $white;
+							}
+						}//el
+					}//attendance
 				}//bst-col
 			}//eventContent
 		}//article#info
