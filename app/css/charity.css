@@ -314,7 +314,14 @@ body {
           clear: both; }
         body main #container #info .intro_information {
           height: 100vh;
-          position: relative; }
+          position: relative;
+          background: -webkit-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../../images/charity/header-animal-opt.jpg") no-repeat;
+          background: -moz-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../../images/charity/header-animal-opt.jpg") no-repeat;
+          background: -o-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../../images/charity/header-animal-opt.jpg") no-repeat;
+          background: -ms-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../../images/charity/header-animal-opt.jpg") no-repeat;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover; }
           body main #container #info .intro_information__group {
             padding: 25px;
             display: flex;
@@ -322,14 +329,49 @@ body {
             flex-rotation: column; }
             body main #container #info .intro_information__group--header {
               font-size: 1.75em;
-              font-weight: 900; }
+              font-weight: 900;
+              color: #ffffff; }
+              body main #container #info .intro_information__group--header h1 {
+                line-height: 1.2em;
+                text-transform: uppercase;
+                font-size: 1.625em;
+                margin-bottom: 5px; }
+              body main #container #info .intro_information__group--header h2 {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                font-size: 0.875em;
+                font-weight: 600;
+                line-height: 1.2em; }
             body main #container #info .intro_information__group--body {
-              background: #cc6055;
-              color: #ffffff;
-              font-size: 1.25em;
+              background: #ffffff;
+              color: #424242;
+              box-shadow: 4px 4px 0px 0px #d27269;
+              font-size: 1.375em;
               letter-spacing: 0.05em;
               line-height: 1.6875em;
               font-weight: 600; }
+            body main #container #info .intro_information__group--footer {
+              font-size: 1.4375em;
+              color: #1c1c1c;
+              background: #f2f2f2;
+              padding: 45px;
+              text-align: center;
+              position: absolute;
+              bottom: 0;
+              left: 155px;
+              border-radius: 50px 50px 0 0px;
+              font-weight: 600; }
+              body main #container #info .intro_information__group--footer:hover {
+                background: #cc6055;
+                color: #ffffff;
+                cursor: pointer; }
+              body main #container #info .intro_information__group--footer h3 {
+                font-size: 1.125em;
+                text-transform: uppercase;
+                font-weight: 600;
+                margin: 0;
+                padding: 0; }
             @media (min-width: 70em) {
               body main #container #info .intro_information__group--header {
                 width: 35%;
