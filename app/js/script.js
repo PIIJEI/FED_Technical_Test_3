@@ -48,3 +48,8 @@ $("#tickets").on("click",function(){
 });
 
 
+// function toggleNav() {
+	$('#bars').click(function(){
+		$('#contentNav').slideToggle(150);
+	});
+// }

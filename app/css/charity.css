@@ -33,7 +33,6 @@ HOW TO USE
 /* Colors */
 body {
   font-family: "Raleway", sans-serif;
-  line-height: 1.25em;
   letter-spacing: 0.05em;
   /* Return to Main Page */
   /* HEADER */
@@ -181,7 +180,10 @@ body {
               float: left; }
               @media (max-width: 40em) {
                 body header nav #nav #header_buttons ul li {
-                  float: none; } }
+                  float: none;
+                  width: 200px;
+                  padding: 15px;
+                  font-size: 1.5em; } }
               body header nav #nav #header_buttons ul li a {
                 text-decoration: none;
                 color: #e08e0b;
@@ -205,6 +207,9 @@ body {
             position: relative;
             background: rgba(0, 0, 0, 0.7);
             height: 100%; } }
+    @media (max-width: 40em) {
+      body header #navbar-on, body header .social-media {
+        display: none; } }
   body main {
     margin: 0;
     padding: 0;
@@ -250,8 +255,8 @@ body {
               border-right: 1px solid #b74337;
               float: left; }
               body main #container .content-nav ul .social ul li a {
-                font-size: 0.75em;
-                padding: 14px 20px;
+                font-size: 0.9375em;
+                padding: 14px 16px;
                 letter-spacing: 0.05em; }
               body main #container .content-nav ul .social ul li:last-of-type {
                 border-right: none; }
@@ -304,82 +309,95 @@ body {
             display: block;
             margin: 0 auto; }
       body main #container #info {
-        position: relative;
-        display: block;
-        width: 100%; }
-        body main #container #info:before, body main #container #info:after {
-          content: '';
-          display: table; }
-        body main #container #info:after {
-          clear: both; }
-        body main #container #info .intro_information {
-          height: 100vh;
-          position: relative;
-          background: -webkit-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../../images/charity/header-animal-opt.jpg") no-repeat;
-          background: -moz-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../../images/charity/header-animal-opt.jpg") no-repeat;
-          background: -o-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../../images/charity/header-animal-opt.jpg") no-repeat;
-          background: -ms-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../../images/charity/header-animal-opt.jpg") no-repeat;
-          background-position: center center;
-          background-repeat: no-repeat;
-          background-size: cover; }
-          body main #container #info .intro_information__group {
-            padding: 25px;
-            display: flex;
-            flex-wrap: wrap;
-            flex-rotation: column; }
-            body main #container #info .intro_information__group--header {
-              font-size: 1.75em;
-              font-weight: 900;
-              color: #ffffff; }
-              body main #container #info .intro_information__group--header h1 {
-                line-height: 1.2em;
-                text-transform: uppercase;
-                font-size: 1.625em;
-                margin-bottom: 5px; }
-              body main #container #info .intro_information__group--header h2 {
-                margin: 0;
-                padding: 0;
-                text-align: center;
-                font-size: 0.875em;
-                font-weight: 600;
-                line-height: 1.2em; }
-            body main #container #info .intro_information__group--body {
-              background: #ffffff;
-              color: #424242;
-              box-shadow: 4px 4px 0px 0px #d27269;
-              font-size: 1.375em;
-              letter-spacing: 0.05em;
-              line-height: 1.6875em;
-              font-weight: 600; }
-            body main #container #info .intro_information__group--footer {
-              font-size: 1.4375em;
-              color: #1c1c1c;
-              background: #f2f2f2;
-              padding: 45px;
+        height: 100%;
+        background: -webkit-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../../images/charity/header-animal-opt.jpg") no-repeat;
+        background: -moz-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../../images/charity/header-animal-opt.jpg") no-repeat;
+        background: -o-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../../images/charity/header-animal-opt.jpg") no-repeat;
+        background: -ms-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../../images/charity/header-animal-opt.jpg") no-repeat;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover; }
+        body main #container #info h1 {
+          margin: 0;
+          padding: 0;
+          line-height: 1.2em;
+          color: #ffffff;
+          text-align: center;
+          padding: 35px 0;
+          letter-spacing: 0.05em;
+          font-size: 3.375em;
+          font-weight: 900;
+          word-break: keep-all; }
+          @media (max-width: 64em) {
+            body main #container #info h1 {
+              font-size: 1.875em; } }
+        body main #container #info .challenges {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row; }
+          body main #container #info .challenges__col-1, body main #container #info .challenges__col-2, body main #container #info .challenges__col-3 {
+            display: block;
+            margin: 0 auto;
+            background: #f2f2f2;
+            padding: 25px 0;
+            border-radius: 5px 5px 0 0; }
+            @media (max-width: 64em) {
+              body main #container #info .challenges__col-1, body main #container #info .challenges__col-2, body main #container #info .challenges__col-3 {
+                border-radius: 0; } }
+            body main #container #info .challenges__col-1 img, body main #container #info .challenges__col-2 img, body main #container #info .challenges__col-3 img {
+              width: 300px;
+              max-width: 100%;
+              display: block;
+              margin: 0 auto;
+              padding: 0px; }
+              @media (max-width: 64em) {
+                body main #container #info .challenges__col-1 img, body main #container #info .challenges__col-2 img, body main #container #info .challenges__col-3 img {
+                  padding: 0;
+                  margin: 0 auto;
+                  width: auto; } }
+            body main #container #info .challenges__col-1 h2, body main #container #info .challenges__col-2 h2, body main #container #info .challenges__col-3 h2 {
+              background: #cc6055;
+              padding: 5px;
               text-align: center;
-              position: absolute;
-              bottom: 0;
-              left: 155px;
-              border-radius: 50px 50px 0 0px;
-              font-weight: 600; }
-              body main #container #info .intro_information__group--footer:hover {
-                background: #cc6055;
-                color: #ffffff;
-                cursor: pointer; }
-              body main #container #info .intro_information__group--footer h3 {
-                font-size: 1.125em;
-                text-transform: uppercase;
-                font-weight: 600;
-                margin: 0;
-                padding: 0; }
-            @media (min-width: 70em) {
-              body main #container #info .intro_information__group--header {
-                width: 35%;
-                margin: 0 5%;
-                padding: 84px 0; }
-              body main #container #info .intro_information__group--body {
-                padding: 25px;
-                width: 50%; } }
+              color: #ffffff;
+              font-weight: 600;
+              font-size: 1.25em; }
+              @media (max-width: 64em) {
+                body main #container #info .challenges__col-1 h2, body main #container #info .challenges__col-2 h2, body main #container #info .challenges__col-3 h2 {
+                  width: auto; } }
+            body main #container #info .challenges__col-1 p, body main #container #info .challenges__col-2 p, body main #container #info .challenges__col-3 p {
+              width: 320px;
+              max-width: 100%;
+              color: #1c1c1c;
+              padding: 25px;
+              text-align: center;
+              line-height: 1.5em; }
+              @media (max-width: 64em) {
+                body main #container #info .challenges__col-1 p, body main #container #info .challenges__col-2 p, body main #container #info .challenges__col-3 p {
+                  width: auto; } }
+            body main #container #info .challenges__col-1 a, body main #container #info .challenges__col-2 a, body main #container #info .challenges__col-3 a {
+              text-align: center;
+              width: 240px;
+              max-width: 100%;
+              background: #cc6055;
+              border: 2px solid #f2f2f2;
+              color: #ffffff;
+              font-weight: 600;
+              padding: 14px 16px;
+              display: block;
+              border-radius: 7px;
+              text-decoration: none;
+              margin: 0 auto; }
+              body main #container #info .challenges__col-1 a:hover, body main #container #info .challenges__col-2 a:hover, body main #container #info .challenges__col-3 a:hover {
+                background: #ffffff;
+                color: #cc6055;
+                border-color: #ffffff; }
+              @media (max-width: 64em) {
+                body main #container #info .challenges__col-1 a, body main #container #info .challenges__col-2 a, body main #container #info .challenges__col-3 a {
+                  width: auto; } }
+    body main .hiddenNav {
+      display: none; }
   body footer {
     background: #f2f2f2;
     clear: both;
