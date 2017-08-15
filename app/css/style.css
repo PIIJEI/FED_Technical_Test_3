@@ -5,9 +5,31 @@
 - Festival Creative Landing Page
 *******
  */
+/* Box-Sizing */
+/* backimage */
+/* CLEARFIX */
 /*********************
 BREAKPOINTS
 *********************/
+/*************** 
+FUNCTION ( CONVERTER 'PX' TO 'EM' )
+****************/
+/*  
+HOW TO USE
+
+-
+
+    h1 {
+      font-size: em(32);
+    }
+
+    // is the same as:
+
+    h1 {
+      font-size: em(32px);
+    }
+
+*/
 /* Colors */
 /* Breakpoints */
 /* Mobile */

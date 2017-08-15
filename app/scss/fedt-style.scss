@@ -31,18 +31,6 @@ $sunflower2	: #f39c12;
 
 $openSans	: 'Open Sans', sans-serif;
 
-/* Breakpoints */
-/* Mobile */
-$smallMin: 320px;
-$smallMax: 767px;
-
-/* Tablet / Notebooks */
-$mediumMin: 768px;
-$mediumMax: 1024px;
-
-/* Desktop */
-$desktopMin: 1025px;
-
 
 body {
 	font-family: $openSans;
@@ -543,11 +531,24 @@ body {
 									content: '';
 									width: 50px;
 									height: 50px;
-									background: $orange;
+									// background: $orange;
 									border-radius: 100%;
 									float: left;
 									margin: 10px;
+
+									/* for icons */
+									background-repeat: no-repeat;
+									background-position: center;
+									background-size: contain;
 								}
+
+								/* ICONS */
+								.icon-c1 {background-image: url('../../images/fedsales/1.png')}
+								.icon-c2 {background-image: url('../../images/fedsales/2.png')}
+								.icon-c3 {background-image: url('../../images/fedsales/3.png')}
+								.icon-c4 {background-image: url('../../images/fedsales/4.png')}
+								.icon-c5 {background-image: url('../../images/fedsales/5.png')}
+
 								h2 {
 									margin: 10px 0;
 									font-size: .9em;

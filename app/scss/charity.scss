@@ -1,0 +1,203 @@
+/* 
+******* Main Site Styling for 
+- Front End Technical Test
+- Charity Creative Landing Page
+- Festival Creative Landing Page
+*******
+ */
+
+@import 'mixins';
+
+/* Colors */
+$white 		: #ffffff;
+$dark 		: #1c1c1c;
+$clouds		: #ecf0f1;
+$silver		: #bdc3c7;
+$vLightBlue : #f1f8f9;
+$gray		: #f6f6f6;
+$gray2		: #f2f2f2;
+$borderG    : #e0e0e0;
+$lightGray	: #e7e7e7;
+$navyBlue	: #0e798b;
+$darkenNB 	: #0b5c6a;
+$lightBlue	: #14b2cc;
+$orange		: #f29323;
+$orangeO	: #f8c991;
+$inactive	: #c0c0c0;
+$midnight	: #2c3e50;
+$asphalt	: #34495e;
+$sunflower	: #f1c40f;
+$sunflower2	: #f39c12;
+// Red
+$pomagranate: #c0392b;
+$alizarin	: #e74c3c;
+
+$raleway	: 'Raleway', sans-serif;
+
+//font weight
+$normal : 400;
+$semi   : 600;
+$heavy  : 900;
+
+body {
+	font-family: $raleway;
+	line-height: em(20px);
+	letter-spacing: 0.05em;
+	/* Return to Main Page */
+
+	#return {
+		background: $dark;
+		font-size: em(10px);
+		padding: 10px;
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			li {
+				overflow: hidden;
+				a {
+					text-decoration: none;
+					color: $clouds;
+					padding: 3px 10px;
+					border-left: 5px solid $alizarin;
+					&:hover {
+						color: $alizarin;
+					}//hover
+				}//a
+			}//li
+		}//ul
+	}//return tab
+/* HEADER */
+	header {
+		height: 100vh;
+		@include backImage('../../images/charity/header-animal-opt.jpg', 0.4, $dark); //  black overlay with 40% opacity
+		background-position: center center;
+		background-repeat: no-repeat;
+  		background-size: cover; // can use any regular css properties to style background
+
+		nav {
+			margin: 0;
+			padding: 0 15px 15px 15px;
+			height: 100%;
+
+			#nav { //ul #nav
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				list-style-position: outside;
+				overflow: hidden;
+				/* logo */
+				.logo {
+					margin: 0 auto;
+					padding: 45px 0;
+					width: 540px;
+					max-width: 100%;
+					display: block;
+					list-style-type: none;
+					list-style-position: outside;
+					a {
+						img {
+							width: 320px;
+							max-width: 100%;
+							display: block;
+							margin: 0 auto;
+						}//img						
+					}//a
+
+				}//logo
+
+				/* Menu List */
+				.menu { /* li.menu */
+					width: 100%;
+					margin: 0;
+					padding:0;
+					background: red;
+					ul {
+						margin:0;
+						padding:0;
+						list-style-type: none;
+						list-style-position: outside;
+						overflow: hidden;
+						li {
+							float: left;
+							a {
+								padding: 14px 16px;
+								text-decoration: none;
+								color: $white;
+								font-size: em(32);
+								font-weight: $heavy;
+								&:hover {
+									background: $dark;
+								}//hover
+							}//a
+						}//li
+					}//ul
+				}//menu
+
+				/* Social Media */
+				.social-media {
+					margin: 0;
+					padding: 0;
+					ul {
+						margin: 0;
+						padding: 0;
+						list-style-type: none;
+						list-style-position: outside;
+						overflow: hidden;
+						position: absolute;
+						bottom: 0;
+						left: 50%;
+						transform: translateX(-50%);
+						li {
+							display: inline-block;
+							a {
+								color: $white;
+								padding: 10px 12px;
+								font-size: em(18px);
+								&:hover {
+									color: $sunflower;
+								}//hover
+							}//a
+						}//li					
+					}//ul
+				}//social-media
+			}//nav
+		}//nav
+
+
+	}//header
+
+
+/* MAIN */
+	main {
+
+	}//main
+
+
+/* FOOTER */
+	footer {
+		background: $gray2;
+		clear: both;
+		width: 100%;
+		position: relative;
+		bottom: 0;
+		text-align:center;
+		font-size: em(12px); //.75em
+		color: $inactive;
+		letter-spacing: 0.05em;
+		p{
+		margin: 0;
+		padding: 20px;
+		font-size: em(14px); //.0875em
+			a {
+				text-decoration: none;
+				color: $inactive;
+				&:hover {
+					color: darken($inactive, 10%);
+					text-decoration: underline;
+				}//hover
+			}//a
+		}//p
+	}//footer
+
+}//body

@@ -5,14 +5,32 @@
 - Festival Creative Landing Page
 *******
  */
+/* Box-Sizing */
+/* backimage */
+/* CLEARFIX */
 /*********************
 BREAKPOINTS
 *********************/
+/*************** 
+FUNCTION ( CONVERTER 'PX' TO 'EM' )
+****************/
+/*  
+HOW TO USE
+
+-
+
+    h1 {
+      font-size: em(32);
+    }
+
+    // is the same as:
+
+    h1 {
+      font-size: em(32px);
+    }
+
+*/
 /* Colors */
-/* Breakpoints */
-/* Mobile */
-/* Tablet / Notebooks */
-/* Desktop */
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
@@ -412,16 +430,30 @@ body {
             flex-direction: row;
             padding: 10px 0; }
             body main article#info #eventContent .bst-col .best-selling-tickets .el .leftOutputData {
-              width: 50%; }
+              width: 50%;
+              /* ICONS */ }
               body main article#info #eventContent .bst-col .best-selling-tickets .el .leftOutputData .icon {
                 display: block;
                 content: '';
                 width: 50px;
                 height: 50px;
-                background: #f29323;
                 border-radius: 100%;
                 float: left;
-                margin: 10px; }
+                margin: 10px;
+                /* for icons */
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain; }
+              body main article#info #eventContent .bst-col .best-selling-tickets .el .leftOutputData .icon-c1 {
+                background-image: url("../../images/fedsales/1.png"); }
+              body main article#info #eventContent .bst-col .best-selling-tickets .el .leftOutputData .icon-c2 {
+                background-image: url("../../images/fedsales/2.png"); }
+              body main article#info #eventContent .bst-col .best-selling-tickets .el .leftOutputData .icon-c3 {
+                background-image: url("../../images/fedsales/3.png"); }
+              body main article#info #eventContent .bst-col .best-selling-tickets .el .leftOutputData .icon-c4 {
+                background-image: url("../../images/fedsales/4.png"); }
+              body main article#info #eventContent .bst-col .best-selling-tickets .el .leftOutputData .icon-c5 {
+                background-image: url("../../images/fedsales/5.png"); }
               body main article#info #eventContent .bst-col .best-selling-tickets .el .leftOutputData h2 {
                 margin: 10px 0;
                 font-size: .9em; }

@@ -1,0 +1,156 @@
+/* 
+******* Main Site Styling for 
+- Front End Technical Test
+- Charity Creative Landing Page
+- Festival Creative Landing Page
+*******
+ */
+/* Box-Sizing */
+/* backimage */
+/* CLEARFIX */
+/*********************
+BREAKPOINTS
+*********************/
+/*************** 
+FUNCTION ( CONVERTER 'PX' TO 'EM' )
+****************/
+/*  
+HOW TO USE
+
+-
+
+    h1 {
+      font-size: em(32);
+    }
+
+    // is the same as:
+
+    h1 {
+      font-size: em(32px);
+    }
+
+*/
+/* Colors */
+body {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.25em;
+  letter-spacing: 0.05em;
+  /* Return to Main Page */
+  /* HEADER */
+  /* MAIN */
+  /* FOOTER */ }
+  body #return {
+    background: #1c1c1c;
+    font-size: 0.625em;
+    padding: 10px; }
+    body #return ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      body #return ul li {
+        overflow: hidden; }
+        body #return ul li a {
+          text-decoration: none;
+          color: #ecf0f1;
+          padding: 3px 10px;
+          border-left: 5px solid #e74c3c; }
+          body #return ul li a:hover {
+            color: #e74c3c; }
+  body header {
+    height: 100vh;
+    background: -webkit-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../../images/charity/header-animal-opt.jpg") no-repeat;
+    background: -moz-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../../images/charity/header-animal-opt.jpg") no-repeat;
+    background: -o-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../../images/charity/header-animal-opt.jpg") no-repeat;
+    background: -ms-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../../images/charity/header-animal-opt.jpg") no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    body header nav {
+      margin: 0;
+      padding: 0 15px 15px 15px;
+      height: 100%; }
+      body header nav #nav {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        list-style-position: outside;
+        overflow: hidden;
+        /* logo */
+        /* Menu List */
+        /* Social Media */ }
+        body header nav #nav .logo {
+          margin: 0 auto;
+          padding: 45px 0;
+          width: 540px;
+          max-width: 100%;
+          display: block;
+          list-style-type: none;
+          list-style-position: outside; }
+          body header nav #nav .logo a img {
+            width: 320px;
+            max-width: 100%;
+            display: block;
+            margin: 0 auto; }
+        body header nav #nav .menu {
+          /* li.menu */
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          background: red; }
+          body header nav #nav .menu ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            list-style-position: outside;
+            overflow: hidden; }
+            body header nav #nav .menu ul li {
+              float: left; }
+              body header nav #nav .menu ul li a {
+                padding: 14px 16px;
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 2em;
+                font-weight: 900; }
+                body header nav #nav .menu ul li a:hover {
+                  background: #1c1c1c; }
+        body header nav #nav .social-media {
+          margin: 0;
+          padding: 0; }
+          body header nav #nav .social-media ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            list-style-position: outside;
+            overflow: hidden;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%); }
+            body header nav #nav .social-media ul li {
+              display: inline-block; }
+              body header nav #nav .social-media ul li a {
+                color: #ffffff;
+                padding: 10px 12px;
+                font-size: 1.125em; }
+                body header nav #nav .social-media ul li a:hover {
+                  color: #f1c40f; }
+  body footer {
+    background: #f2f2f2;
+    clear: both;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    font-size: 0.75em;
+    color: #c0c0c0;
+    letter-spacing: 0.05em; }
+    body footer p {
+      margin: 0;
+      padding: 20px;
+      font-size: 0.875em; }
+      body footer p a {
+        text-decoration: none;
+        color: #c0c0c0; }
+        body footer p a:hover {
+          color: #a7a7a7;
+          text-decoration: underline; }
