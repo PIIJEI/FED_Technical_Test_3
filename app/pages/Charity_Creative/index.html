@@ -27,31 +27,29 @@
 
 <!-- NAVIGATION -->
 	<nav role="navigation">
-		<!-- Nav Icon for mobile responsive -->
-		<div id="nav-r">
-			
-		</div>
 
 		<!-- Main Nav Panel -->
 		<ul id="nav">
 			<!-- Logo/Brand -->
-		
+
 			<li class="logo">
 				<a href="#" onclick="return false">
-					<img src="../../images/charity/brand.svg" alt="charity brand logo" title="Charity Brand - Logo">
+					<img src="../../images/charity/logo.svg" alt="charity brand logo" title="Charity Brand - Logo">
 				</a>
 			</li>
 
 			<!-- Menu List -->
 			<li class="menu">
-				<ul>
+
+				<ul id="navbar-on">
 					<li><a href="#" onclick="return false">Home</a></li>
 					<li><a href="#" onclick="return false">About Us</a></li>
 					<li><a href="#" onclick="return false">Fundraising</a></li>
 					<li><a href="#" onclick="return false">Events</a></li>
-					<li><a href="#" onclick="return false">Members Area <span class="fa fa-users" aria-hidden="true"></span></a></li>
+					<li><a href="#" onclick="return false">Members Area</a></li>
 				</ul>
 			</li>
+
 
 			<!-- Social Media -->
 			<li class="social-media">
@@ -59,6 +57,15 @@
 					<li><a href="#"><span class="fa fa-facebook"></span></a></li>
 					<li><a href="#"><span class="fa fa-twitter"></span></a></li>
 					<li><a href="#"><span class="fa fa-instagram"></span></a></li>
+				</ul>
+			</li>
+
+			<!-- Buttons -->
+
+			<li id="header_buttons">
+				<ul>
+					<li><a href="#" onclick="return false">Donate</a></li>
+					<li><a href="#" onclick="return false">Scroll</a></li>
 				</ul>
 			</li>
 		</ul>
@@ -69,7 +76,53 @@
 
 <!-- Main Content -->
 <main role="main">
+	<div id="container">
+		<div class="content-nav">
 
+			<div id="bars"><span class="fa fa-bars"></span> Menu</div>
+
+			<ul id="contentNav">
+				<li class="branding"><a href="#" onclick="return false"><span>CHARITY</span> NUTickets</a></li>
+				<li><a href="#" onclick="return false">Home</a></li>
+				<li><a href="#" onclick="return false">About Us</a></li>
+				<li><a href="#" onclick="return false">Fundraising</a></li>
+				<li><a href="#" onclick="return false">Events</a></li>
+				<li><a href="#" onclick="return false">Members Area</a></li>
+				<li class="social">
+					<ul>
+						<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+						<li><a href="#"><span class="fa fa-twitter"></span></a></li>
+						<li><a href="#"><span class="fa fa-instagram"></span></a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<section id="welcome">
+			<div class="welcome_intro">
+				<img src="../../images/charity/branding-image.png" alt="brand image" title="Charity Branding Logo">
+			</div>
+		</section>
+
+		<section id="info">
+			<div class="intro_information">
+				<div class="intro_information__group">
+					<div class="intro_information__group--header">
+						<h1>Introduction</h1>		
+					</div>
+					<div class="intro_information__group--body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>	
+					</div>				
+				</div>
+
+			</div>
+		</section>
+	</div>
 </main>
 
 <footer role="contentinfo">
