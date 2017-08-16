@@ -22,6 +22,22 @@
 	</ul>
 </div>
 
+<div id="login-form" class="hidden">
+	<div class="login-group">
+		<h1>Login</h1>
+		<label>Username</label>
+		<input type="text" name="username">
+		<label>Password</label>
+		<input type="password" name="password">
+		<input type="submit" name="login" value="Sign In">	
+		<a href="#" onclick="return false">Not a member? <span>Click here to register</span></a>	
+		<!-- cross -->
+		<div id="closeBox">
+			<span class="fa fa-times"></span>
+		</div>	
+	</div>
+</div>
+
 <!-- Header -->
 <header role="banner">
 
@@ -46,7 +62,7 @@
 					<li><a href="#" onclick="return false">About Us</a></li>
 					<li><a href="#" onclick="return false">Fundraising</a></li>
 					<li><a href="#" onclick="return false">Events</a></li>
-					<li><a href="#" onclick="return false">Members Area</a></li>
+					<li onclick="loginForm()"><a href="#" onclick="return false">Members Area</a></li>
 				</ul>
 			</li>
 
@@ -54,9 +70,9 @@
 			<!-- Social Media -->
 			<li class="social-media">
 				<ul>
-					<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-					<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-					<li><a href="#"><span class="fa fa-instagram"></span></a></li>
+					<li onclick="alert('This is a test click')"><a href="#" onclick="return false"><span class="fa fa-facebook"></span></a></li>
+					<li onclick="alert('This is a test click')"><a href="#" onclick="return false"><span class="fa fa-twitter"></span></a></li>
+					<li onclick="alert('This is a test click')"><a href="#" onclick="return false"><span class="fa fa-instagram"></span></a></li>
 				</ul>
 			</li>
 
@@ -87,12 +103,12 @@
 				<li><a href="#" onclick="return false">About Us</a></li>
 				<li><a href="#" onclick="return false">Fundraising</a></li>
 				<li><a href="#" onclick="return false">Events</a></li>
-				<li><a href="#" onclick="return false">Members Area</a></li>
+				<li onclick="loginForm()"><a href="#" onclick="return false">Members Area</a></li>
 				<li class="social">
 					<ul>
-						<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-						<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-						<li><a href="#"><span class="fa fa-instagram"></span></a></li>
+						<li onclick="alert('This is a test click')"><a href="#" onclick="return false"><span class="fa fa-facebook"></span></a></li>
+						<li onclick="alert('This is a test click')"><a href="#" onclick="return false"><span class="fa fa-twitter"></span></a></li>
+						<li onclick="alert('This is a test click')"><a href="#" onclick="return false"><span class="fa fa-instagram"></span></a></li>
 					</ul>
 				</li>
 			</ul>

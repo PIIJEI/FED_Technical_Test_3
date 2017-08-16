@@ -67,6 +67,119 @@ body {
 			}//li
 		}//ul
 	}//return tab
+
+
+
+	/* Login */
+	#login-form {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		transform: translate(-50%, -50%);
+		background: rgba(7,7,7,.8);
+		color: $dark;
+		z-index: 100;
+		.login-group {
+			padding: 85px;
+			border-radius: 4px;
+			background: $white;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			text-align: center;
+			@include breakpoint(mobileonly) {
+				padding: 25px;
+				border-radius: 0;
+			}//breakpoint
+			h1 {
+				font-weight: $semi;
+				font-size: em(24px);
+			}//h1
+			label {
+				font-size: em(15px);
+				letter-spacing: 0.05em;
+			}//label
+			input[type="text"], input[type="password"] {
+				width: 240px;
+				max-width: 100%;
+				padding: 5px;
+				margin: 15px auto;
+				border: 1px solid $dark;
+				border-radius: 2px;
+				outline: none;
+				box-shadow: none;
+				color: lighten($dark, 20%);
+				display: block;
+				@include breakpoint(mobileonly) {
+					width: 185px;					
+				}//breakpoint
+			}//input	
+			input[type="submit"] {
+				width: 240px;
+				background: $red;
+				border: 2px solid transparent;
+				padding: 10px;
+				color: $white;
+				letter-spacing: 0.05em;
+				font-weight: $semi;
+				font-size: em(15px);
+				display: block;
+				margin: 0 auto;
+				@include breakpoint(mobileonly) {
+					width: 185px;					
+				}//breakpoint
+				&:hover {
+					cursor: pointer;
+					background: $white;
+					color: $red;
+					border-color: $red;
+				}//hover
+			}//submit	
+			a {
+				color: $dark;
+				font-size: em(14px);
+				word-wrap: keep-all;
+				text-align: center;
+				display: block;
+				margin: 15px auto 0 auto;
+				padding: 5px 7px;
+				text-decoration: none;
+				span {
+					font-weight: $semi;
+				}//span
+				&:hover {
+					text-decoration: underline;
+					color: $red;
+				}//hover
+			}//a
+			#closeBox {
+				font-size: em(16px);
+				background: $dark;
+				color: $white;
+				position: absolute;
+				top: 0;
+				right: 0;
+				padding: 13px;
+				border: 2px solid $dark;
+				margin: 5px;
+				&:hover {
+					cursor: pointer;
+					background: $white;
+					border-color: $dark;
+					color: $dark;
+				}//hover
+			}//closeBox
+		}//login
+	}//login-form
+
 /* HEADER */
 	header {
 		height: 100vh;
@@ -404,7 +517,7 @@ body {
 
 			#info {
 				height: 100%;
-				@include backImage('../images/charity/header-animal-opt.jpg', 0.4, $dark); //  black overlay with 40% opacity
+				@include backImage('../images/charity/charity_event.jpg', 0.4, $dark); //  black overlay with 40% opacity
 				background-position: center center;
 				background-repeat: no-repeat;
 		  		background-size: cover; // can use any regular css properties to style background
@@ -507,7 +620,11 @@ body {
 
 	.active-nav {
 		background: darken($red, 25%);
-	}
+	}//active-nav
+
+	.hidden {
+		display: none;
+	}//hiddenForm
 
 
 /* FOOTER */

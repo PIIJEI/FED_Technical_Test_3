@@ -48,8 +48,16 @@ $("#tickets").on("click",function(){
 });
 
 
-// function toggleNav() {
-	$('#bars').click(function(){
-		$('#contentNav').slideToggle(150);
-	});
-// }
+$('#bars').click(function(){
+	$('#contentNav').slideToggle(150);
+});
+
+function loginForm() {
+	$('#login-form').fadeIn(300).removeClass('hidden');
+	$('body').css("overflow","hidden");
+}
+
+$('#closeBox').on('click',function(){
+	$('#login-form').fadeOut(300).addClass('hidden');
+	$('body').css("overflow","visible");
+});
