@@ -28,5 +28,80 @@ $midnight	: #2c3e50;
 $asphalt	: #34495e;
 $sunflower	: #f1c40f;
 $sunflower2	: #f39c12;
+// Red
+$pomagranate: #c0392b;
+$alizarin	: #e74c3c;
+$red		: #cc6055;
 
-$openSans	: 'Open Sans', sans-serif;
+$raleway	: 'Raleway', sans-serif;
+
+//font weight
+$normal : 400;
+$semi   : 600;
+$heavy  : 900;
+
+body {
+	font-family: $raleway;
+	letter-spacing: 0.05em;
+
+	/* Return to Main Page */
+	#return {
+		background: $dark;
+		font-size: em(10px);
+		padding: 10px;
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			li {
+				overflow: hidden;
+				a {
+					text-decoration: none;
+					color: $clouds;
+					padding: 3px 10px;
+					border-left: 5px solid $alizarin;
+					&:hover {
+						color: $alizarin;
+					}//hover
+				}//a
+			}//li
+		}//ul
+	}//return tab
+
+	/* HEADER */
+	header {
+
+	}//header
+
+	/* MAIN */
+	main {
+
+	}//main
+
+	/* FOOTER */
+	footer {
+		background: $gray2;
+		clear: both;
+		width: 100%;
+		position: relative;
+		bottom: 0;
+		text-align:center;
+		font-size: em(12px); //.75em
+		color: $inactive;
+		letter-spacing: 0.05em;
+		p{
+		margin: 0;
+		padding: 20px;
+		font-size: em(14px); //.0875em
+			a {
+				text-decoration: none;
+				color: $inactive;
+				&:hover {
+					color: darken($inactive, 10%);
+					text-decoration: underline;
+				}//hover
+			}//a
+		}//p
+	}//footer
+
+}//body
