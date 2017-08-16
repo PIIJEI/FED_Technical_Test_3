@@ -183,7 +183,7 @@ body {
 /* HEADER */
 	header {
 		height: 100vh;
-		@include backImage('../../images/charity/header-animal-opt.jpg', 0.4, $dark); //  black overlay with 40% opacity
+		@include backImage('../images/charity/header-animal-opt.jpg', 0.4, $dark); //  black overlay with 40% opacity
 		background-position: center center;
 		background-repeat: no-repeat;
   		background-size: cover; // can use any regular css properties to style background

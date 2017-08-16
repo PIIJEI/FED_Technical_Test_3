@@ -49,6 +49,7 @@ body {
 		background: $dark;
 		font-size: em(10px);
 		padding: 10px;
+		z-index: 10;
 		ul {
 			list-style-type: none;
 			margin: 0;
@@ -68,14 +69,380 @@ body {
 		}//ul
 	}//return tab
 
+
+	/* LOGIN FORM */
+	#login-form {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		transform: translate(-50%, -50%);
+		background: rgba(7,7,7,.8);
+		color: $dark;
+		z-index: 100;
+		.login-group {
+			padding: 85px;
+			border-radius: 4px;
+			background: $white;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			text-align: center;
+			@include breakpoint(mobileonly) {
+				padding: 25px;
+				border-radius: 0;
+			}//breakpoint
+			img {
+				width: 180px;
+				max-width: 100%;
+				display: block;
+				margin: 0 auto;
+			}//img
+			h1 {
+				font-weight: $semi;
+				font-size: em(24px);
+			}//h1
+			label {
+				font-size: em(15px);
+				letter-spacing: 0.05em;
+			}//label
+			input[type="text"], input[type="password"] {
+				width: 240px;
+				max-width: 100%;
+				padding: 5px;
+				margin: 15px auto;
+				border: 1px solid $dark;
+				border-radius: 2px;
+				outline: none;
+				box-shadow: none;
+				color: lighten($dark, 20%);
+				display: block;
+				@include breakpoint(mobileonly) {
+					width: 185px;					
+				}//breakpoint
+			}//input	
+			input[type="submit"] {
+				width: 240px;
+				background: $orange;
+				border: 2px solid transparent;
+				padding: 10px;
+				color: $white;
+				letter-spacing: 0.05em;
+				font-weight: $semi;
+				font-size: em(15px);
+				display: block;
+				margin: 0 auto;
+				@include breakpoint(mobileonly) {
+					width: 185px;					
+				}//breakpoint
+				&:hover {
+					cursor: pointer;
+					background: $white;
+					color: $orange;
+					border-color: $orange;
+				}//hover
+			}//submit	
+			a {
+				color: $dark;
+				font-size: em(14px);
+				word-wrap: keep-all;
+				text-align: center;
+				display: block;
+				margin: 15px auto 0 auto;
+				padding: 5px 7px;
+				text-decoration: none;
+				span {
+					font-weight: $semi;
+				}//span
+				&:hover {
+					text-decoration: underline;
+					color: $red;
+				}//hover
+			}//a
+			#closeBox {
+				font-size: em(16px);
+				background: $dark;
+				color: $white;
+				position: absolute;
+				top: 0;
+				right: 0;
+				padding: 13px;
+				border: 2px solid $dark;
+				margin: 5px;
+				&:hover {
+					cursor: pointer;
+					background: $white;
+					border-color: $dark;
+					color: $dark;
+				}//hover
+			}//closeBox
+		}//login
+	}//login-form
+
 	/* HEADER */
 	header {
+		height: 100vh;
+		@include backImage('../images/cashless/festival_header-opt.jpg', 0.6, $dark);
+		background-position: center center;
+		background-repeat: no-repeat;
+  		background-size: cover; // can use any regular css properties to style background
+
+		nav { 
+			margin: 0;
+			padding: 0;
+			position: relative;
+			width: 100%;
+
+
+			/* Mobile */
+			#f-mobile-bars-only {
+				position: relative;
+				font-size: em(18px);
+				@include breakpoint(desktop) {
+					display: none;
+				}//desktop
+				@include breakpoint(laptop) {
+					display: block;
+				}//mobileonly
+			}//mobile-bars-only
+
+			#f-main-nav {
+				@include breakpoint(laptop) {
+					display: none;
+				}//mobileonly
+				@include breakpoint(laptop) {
+					display: block;
+				}//laptop
+			}//main-nav
+
+			/* #main-nav */
+			ul { 
+				width: 100%;
+				margin:0;
+				padding:0;
+				overflow: hidden;
+				list-style-type: none;
+				list-style-position: outside;
+				float: left;
+				@include breakpoint(mobileonly) {
+					float: none;
+					background: $dark;
+
+				}//mobileonly
+				li {
+					float: left;
+					@include breakpoint(mobileonly) {
+						float: none;
+						text-align: center;
+					}//mobileonly
+					a {
+						text-decoration: none;
+						color: $white;
+						font-weight: $semi;
+						display: block;
+						font-size: em(12px);
+						letter-spacing: 0.075em;
+						padding: 14px 16px;
+						&:hover {
+							color: $orange;
+							@include breakpoint(mobileonly) {
+								background: $white;
+							}//
+						}//hover
+					}//a
+				}//li
+				.social-media {
+					font-size: em(12px);
+					@include breakpoint(mobileonly) {
+						li {
+							display: inline;
+						}//li
+						a {
+							display: inline-block;
+							margin-top: 13px;
+							text-align: center;
+						}//a
+					}//mobileonly
+				}//social-media
+			}//ul
+		}//nav
+
+		#header-group {
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			img {
+				display: block;
+				margin: 0 auto;
+				max-width: 100%;
+			}//img
+			.buttons {
+				width: 240px;
+				max-width: 100%;
+				margin: 0 auto;
+				a {
+					text-decoration: none;
+					color: $white;
+					border: 3px solid $white;
+					border-radius: 5px;
+					text-align: center;
+					font-size: em(20px);
+					display: block;
+					padding: 24px 12px;
+					font-weight: $semi;
+					margin-bottom: 75px;
+					&:hover {
+						background: $white;
+						color: $orange;
+					}//hover
+				}//a
+				@include breakpoint(mobileonly) {
+					width: 184px;
+					display: none;
+					a {
+						font-size: em(15px);
+					}//a
+				}//mobileonly
+			}//buttons
+				a {
+					text-decoration: none;
+					display: block;
+					.arrowDownScroll { 
+						font-size: em(24px);
+						color: $white;
+						text-align: center;
+						display: block;
+						margin: 0 auto;
+						width: 26px;
+						transition: .2s all ease-in-out;
+						padding: 4px 6px;
+						border-radius: 3;
+						&:hover {
+							transform:translatey(25%);
+							cursor: pointer;
+						}//hover
+					}//span
+					@include breakpoint(mobileonly) {
+						display: none;
+					}
+				}//a
+		}//header-group
 
 	}//header
 
 	/* MAIN */
 	main {
+		margin: 0;
+		padding: 0;
+		position: relative;
+		#f_container {
+			padding: 0;
+			text-align: center;
+			width: 100%;
+			article {
+				margin: 0;
+				padding: 25px;
+				max-width: 100%;
+				display: block;
+				margin: 0 auto;
+				h1 {
+					letter-spacing: 0.05em;
+					line-height: 1.2em;
+					font-weight: $heavy;
+					font-size: em(36px);
+				}//h1
+				p {
+					letter-spacing: 0.05em;
+					line-height: 1.5em;
+					font-size: em(20px);
+				}//p
 
+				section { /* col */
+					margin: 0;
+					padding: 0;
+				}//section
+				.col__one, .col__two, .col__three {
+					width: 320px;
+					max-width: 100%;
+					display: inline-block;
+					margin: 5px auto;
+					padding: 25px;
+					@include breakpoint(mobileonly) {
+						padding: 0;
+					}//mobileonly
+					h2 {
+						padding: 20px;
+						font-size: em(20px);
+						background: $orange;
+						color: $white;
+						font-weight: $semi;
+					}//h2
+					p {
+						padding: 20px;
+						font-size: em(18px);
+						background: lighten($orange, 25%);
+						@include breakpoint(mobileonly) {
+							font-size: em(16px);
+							padding: 10px;
+						}//mobileonly
+					}//p
+					img {
+						width: 300px;
+						max-width: 100%;
+						display: block;
+						margin: 0 auto;
+					}//img
+				}//cols one two three
+				.sub {
+					h3 {
+						font-weight: em(26px);
+						font-weight: $semi;
+					}//h3
+					a {
+						text-align: center;
+						margin: 0 auto;
+						text-decoration: none;
+						font-size: em(18px);
+						text-transform: uppercase;
+						font-weight: $semi;
+						display: block;
+						padding: 14px 16px;
+						width: 280px;
+						max-width: 100%;
+						background: $orange;
+						color: $white;
+						border: 2px solid transparent;
+						border-radius: 2px;
+						transition: .1s all ease-in-out;
+						&:hover {
+							background: $white;
+							color: $orange;
+							border-color: $orange;
+						}//hover
+						@include breakpoint(mobileonly) {
+							width: 100%;
+							padding: 24px 0;
+						}//mobileonly
+					}//a
+					p {
+						font-weight: $semi;
+						font-size: em(20px);
+					}//p
+					span {
+						font-size: em(12px);
+						color: $orange;
+						letter-spacing: 0.05em;
+					}//span
+				}//sub
+			} /* Col Article */
+		}//f_container
 	}//main
 
 	/* FOOTER */
@@ -103,5 +470,14 @@ body {
 			}//a
 		}//p
 	}//footer
+
+	.hidden {
+		display: none;
+	}//hidden
+
+	.active-nav {
+		background: rgba(15,15,15,.8);
+		color: $orange;
+	}//active-nav
 
 }//body

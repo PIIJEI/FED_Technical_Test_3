@@ -61,3 +61,29 @@ $('#closeBox').on('click',function(){
 	$('#login-form').fadeOut(300).addClass('hidden');
 	$('body').css("overflow","visible");
 });
+
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+      navigation: true,
+      navigationPosition: 'left',
+      scrollingSpeed: 500
+    });
+});
+
+
+$('#f-mobile-bars-only').click(function(){
+	$('#f-main-nav').slideToggle(300).css("display","block");
+});
+
+$(".scrollDown").click(function(event){
+	 event.preventDefault();
+	 //calculate destination place
+	 var dest=0;
+	 if($(this.hash).offset().top > $(document).height()-$(window).height()){
+	      dest=$(document).height()-$(window).height();
+	 }else{
+	      dest=$(this.hash).offset().top;
+	 }
+	 //go to destination
+	 $('html,body').animate({scrollTop:dest}, 560,'swing');
+});
