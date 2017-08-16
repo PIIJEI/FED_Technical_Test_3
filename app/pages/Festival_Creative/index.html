@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Piotr Osiak">
+	<title>NUTickets - Creative Cashless Festival Management by Piotr Osiak &copy; 2017</title>
+	<link rel="stylesheet" type="text/css" href="../../css/cashless.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,900" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- Return to main page -->
+<div id="return">
+	<ul>
+		<li>
+			<a href="../../index.html">Return To Main Page</a>
+		</li>
+	</ul>
+</div>
+
+<div id="login-form" class="hidden">
+	<div class="login-group">
+		<img src="../../images/cashless/brand.png" alt="brand" title="Festival Manager Brand">
+		<h1>Login</h1>
+		<label>Username</label>
+		<input type="text" name="username">
+		<label>Password</label>
+		<input type="password" name="password">
+		<label>Email</label>
+		<input type="text" name="text">
+		<input type="submit" name="login" value="Sign In">	
+		<a href="#" onclick="return false">Not a member? <span>Click here to register</span></a>	
+		<!-- cross -->
+		<div id="closeBox">
+			<span class="fa fa-times"></span>
+		</div>	
+	</div>
+</div>
+
+
+<!-- Header -->
+<header role="banner">
+	<nav id="navigation">
+		<ul id="f-mobile-bars-only">
+			<li><a href="#" onclick="return false"><span class="fa fa-bars" aria-role="hidden"></span> Menu</a></li>
+		</ul>
+		<ul id="f-main-nav">
+			<li><a class="active-nav" href="#" onclick="return false"><span class="fa fa-home"></span> Home</a></li>
+			<li><a href="#" onclick="return false"><span class="fa fa-info" aria-role="hidden"></span> About</a></li>
+			<li><a href="#" onclick="return false"><span class="fa fa-thumb-tack" aria-role="hidden"></span> Features</a></li>
+			<li><a href="#" onclick="return false"><span class="fa fa-plane" aria-role="hidden"></span> Festivals</a></li>
+			<li><a href="#" onclick="return false"><span class="fa fa-users" aria-role="hidden"></span> Members</a></li>
+			<li><a href="#" onclick="return false"><span class="fa fa-comment" aria-role="hidden"></span> Contact Us</a></li>
+			<li>
+				<ul class="social-media">
+					<li><a href="#" onclick="return false" class="fa fa-facebook"></a></li>
+					<li><a href="#" onclick="return false" class="fa fa-twitter"></a></li>
+					<li><a href="#" onclick="return false" class="fa fa-instagram"></a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+	<div id="header-group">
+		<img src="../../images/cashless/brand-svg.svg" alt="brand logo" title="Cashless Festivals Management">
+		<div class="buttons" onclick="loginForm()">
+			<a href="#" onclick="return false">Sign Up Now!</a>			
+		</div>
+		<a class="scrollDown" href="#f_container"><span class="arrowDownScroll fa fa-arrow-down" aria-role="hidden"></span></a>
+	</div>
+</header>
+
+
+<!-- Main Content -->
+<main role="main">
+
+	<div id="f_container">
+		<article class="col">
+			<h1>What we offer</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<section class="col col__one">
+				<img src="../../images/cashless/one.jpg" alt="one" title="Cost Free">
+				<h2><span class="fa fa-money" aria-role="hidden"></span> Cost Free</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</section>
+
+			<section class="col col__two">
+				<img src="../../images/cashless/two.jpg" alt="one" title="great Environment">
+				<h2><span class="fa fa-envira" aria-role="hidden"></span> Great Environment</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</section>
+
+			<section class="col col__three">
+				<img src="../../images/cashless/three.jpg" alt="one" title="ease of use">
+				<h2><span class="fa fa-cog" aria-role="hidden"></span> Ease of use</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</section>
+
+			<section class="col sub" onclick="loginForm()">
+				<h3>Why not start your journey with us?</h3>
+				<a href="#" onclick="return false">Join Now!</a>
+				<p>It's FREE!</p>
+				<span>No Hidden Costs Included.</span>
+			</section>
+		</article>
+	</div>
+
+</main>
+
+
+<footer role="contentinfo">
+	<!-- Footer -->
+	<p>Copyright &copy; 2017 by <a href="http://www.piijeidesigns.co.uk/">Piotr Osiak (PIIJEI Designs)</a></p>
+</footer>
+
+<!-- Scripts -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.js"></script>
+<script type="text/javascript" src="../../js/script.js"></script>
+</body>
+</html>
