@@ -236,7 +236,7 @@ body {
               text-decoration: none;
               font-weight: 400;
               letter-spacing: 0.05em;
-              font-size: 0.875em; }
+              font-size: 0.9375em; }
               body main #container .content-nav ul li a:hover {
                 background: #b74337; }
           body main #container .content-nav ul .branding {
@@ -310,10 +310,10 @@ body {
             margin: 0 auto; }
       body main #container #info {
         height: 100%;
-        background: -webkit-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../../images/charity/header-animal-opt.jpg") no-repeat;
-        background: -moz-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../../images/charity/header-animal-opt.jpg") no-repeat;
-        background: -o-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../../images/charity/header-animal-opt.jpg") no-repeat;
-        background: -ms-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../../images/charity/header-animal-opt.jpg") no-repeat;
+        background: -webkit-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../images/charity/header-animal-opt.jpg") no-repeat;
+        background: -moz-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../images/charity/header-animal-opt.jpg") no-repeat;
+        background: -o-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../images/charity/header-animal-opt.jpg") no-repeat;
+        background: -ms-linear-gradient(left, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4)), url("../images/charity/header-animal-opt.jpg") no-repeat;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover; }
@@ -398,6 +398,8 @@ body {
                   width: auto; } }
     body main .hiddenNav {
       display: none; }
+  body .active-nav {
+    background: #7c2d25; }
   body footer {
     background: #f2f2f2;
     clear: both;

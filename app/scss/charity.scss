@@ -295,7 +295,7 @@ body {
 							text-decoration: none;
 							font-weight: $normal;
 							letter-spacing: 0.05em;
-							font-size: em(14px);
+							font-size: em(15px);
 							&:hover {
 								background: darken($red, 10%);
 							}//hover
@@ -404,7 +404,7 @@ body {
 
 			#info {
 				height: 100%;
-				@include backImage('../../images/charity/header-animal-opt.jpg', 0.4, $dark); //  black overlay with 40% opacity
+				@include backImage('../images/charity/header-animal-opt.jpg', 0.4, $dark); //  black overlay with 40% opacity
 				background-position: center center;
 				background-repeat: no-repeat;
 		  		background-size: cover; // can use any regular css properties to style background
@@ -504,6 +504,10 @@ body {
 			display: none;
 		}//hiddenNav
 	}//main
+
+	.active-nav {
+		background: darken($red, 25%);
+	}
 
 
 /* FOOTER */
